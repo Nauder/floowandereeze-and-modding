@@ -1,0 +1,6 @@
+Pillow==10.0.1
+pygubu==0.31
+UnityPy==1.10.2
+selenium==4.13.0
+bs4==0.0.1
+jupyter==1.0.0

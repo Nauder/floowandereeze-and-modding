@@ -1,0 +1,2293 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.3">
+  <object class="tk.Toplevel" id="toplevel1">
+    <property name="background">#1B2838</property>
+    <property name="geometry">1400x800</property>
+    <property name="height">200</property>
+    <property name="iconphoto">res/icon.png</property>
+    <property name="resizable">both</property>
+    <property name="title" translatable="yes">Floowandereeze &amp; Modding</property>
+    <property name="width">200</property>
+    <child>
+      <object class="ttk.Notebook" id="notebook">
+        <property name="height">800</property>
+        <property name="width">200</property>
+        <layout manager="pack">
+          <property name="fill">both</property>
+          <property name="side">top</property>
+        </layout>
+        <child>
+          <object class="ttk.Notebook.Tab" id="tabSleeve">
+            <property name="compound">top</property>
+            <property name="text" translatable="yes">  Sleeves  </property>
+            <child>
+              <object class="tk.Frame" id="frameSleeves">
+                <property name="background">#1B2838</property>
+                <property name="height">200</property>
+                <property name="width">200</property>
+                <layout manager="pack">
+                  <property name="side">top</property>
+                </layout>
+                <child>
+                  <object class="tk.Label" id="lbg1">
+                    <property name="background">#1B2838</property>
+                    <property name="image">res/bg.png</property>
+                    <property name="relief">flat</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="label4">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 14 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="text" translatable="yes">Game path, usually Steam/steamapps/common/Yu-Gi-Oh! Master Duel/LocalData/0x00000000:</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.03</property>
+                      <property name="rely">0.03</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="card">
+                    <property name="background">#1B2838</property>
+                    <property name="image">res/sleeve.png</property>
+                    <property name="text" translatable="yes">label4</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.62</property>
+                      <property name="rely">0.01</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="label7">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 14 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="text" translatable="yes">Image to use, dimensions should be around 82:121:</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.03</property>
+                      <property name="rely">0.12</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="pygubu.builder.widgets.pathchooserinput" id="gamePath">
+                    <property name="title" translatable="yes">Game Path</property>
+                    <property name="type">directory</property>
+                    <bind sequence="&lt;&lt;PathChooserPathChanged&gt;&gt;" handler="setup_sleeves" add="" />
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.03</property>
+                      <property name="rely">0.07</property>
+                      <property name="width">800</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="pygubu.builder.widgets.pathchooserinput" id="imagePath">
+                    <property name="title" translatable="yes">Image to Replace Sleeve</property>
+                    <property name="type">file</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.03</property>
+                      <property name="rely">0.16</property>
+                      <property name="width">800</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="pygubu.builder.widgets.scrollbarhelper" id="scrollbarhelper1">
+                    <property name="scrolltype">both</property>
+                    <property name="usemousewheel">false</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relheight">0.66</property>
+                      <property name="relwidth">0.585</property>
+                      <property name="relx">0.03</property>
+                      <property name="rely">0.32</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                    <child>
+                      <object class="tk.Text" id="sleeves">
+                        <property name="background">#1B2838</property>
+                        <property name="cursor">hand2</property>
+                        <property name="height">10</property>
+                        <property name="highlightbackground">#1B2838</property>
+                        <property name="relief">ridge</property>
+                        <property name="setgrid">false</property>
+                        <property name="width">50</property>
+                        <layout manager="pack">
+                          <property name="side">top</property>
+                        </layout>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Button" id="button3">
+                    <property name="activebackground">#7be</property>
+                    <property name="activeforeground">#eee</property>
+                    <property name="background">#59c</property>
+                    <property name="borderwidth">0</property>
+                    <property name="command" type="command" cbtype="simple">replace_sleeve</property>
+                    <property name="cursor">hand2</property>
+                    <property name="font">{Helvetica} 12 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="padx">5</property>
+                    <property name="pady">5</property>
+                    <property name="text" translatable="yes">Replace</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.31</property>
+                      <property name="rely">0.22</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Button" id="button1">
+                    <property name="activebackground">#379</property>
+                    <property name="activeforeground">#eee</property>
+                    <property name="background">#579</property>
+                    <property name="borderwidth">0</property>
+                    <property name="command" type="command" cbtype="simple">extract_sleeve</property>
+                    <property name="cursor">hand2</property>
+                    <property name="font">{Helvetica} 12 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="padx">13</property>
+                    <property name="pady">5</property>
+                    <property name="text" translatable="yes">Extract</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.42</property>
+                      <property name="rely">0.22</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="label6">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 14 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="text" translatable="yes"> Select the sleeve to replace from the gallery, repacement cannot be reversed </property>
+                    <property name="wraplength">800</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.06</property>
+                      <property name="rely">0.288</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Frame" id="blocker">
+                    <property name="background">#1B2838</property>
+                    <property name="height">200</property>
+                    <property name="width">200</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relheight">0.83</property>
+                      <property name="relwidth">0.62</property>
+                      <property name="relx">1.0</property>
+                      <property name="rely">0.22</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Checkbutton" id="checkSleeve">
+                    <property name="text" translatable="yes">Add black borders to the image</property>
+                    <property name="variable">int:tehe</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.03</property>
+                      <property name="rely">0.23</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Button" id="sleeve" named="True">
+                    <property name="activebackground">#579</property>
+                    <property name="activeforeground">#eee</property>
+                    <property name="background">#779</property>
+                    <property name="borderwidth">0</property>
+                    <property name="command" type="command" cbtype="with_wid">copy_bundle</property>
+                    <property name="cursor">hand2</property>
+                    <property name="font">{Helvetica} 12 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="padx">16</property>
+                    <property name="pady">5</property>
+                    <property name="relief">flat</property>
+                    <property name="text" translatable="yes">Copy</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.53</property>
+                      <property name="rely">0.22</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Notebook.Tab" id="tabSleeveDX">
+            <property name="compound">top</property>
+            <property name="text" translatable="yes"> SleevesDX </property>
+            <child>
+              <object class="tk.Frame" id="frame6">
+                <property name="background">#1B2838</property>
+                <property name="height">200</property>
+                <property name="width">200</property>
+                <layout manager="pack">
+                  <property name="side">top</property>
+                </layout>
+                <child>
+                  <object class="tk.Label" id="lbg6">
+                    <property name="background">#1B2838</property>
+                    <property name="image">res/bg.png</property>
+                    <property name="relief">flat</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="cardDx">
+                    <property name="background">#1B2838</property>
+                    <property name="image">res/sleeve.png</property>
+                    <property name="text" translatable="yes">label4</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.62</property>
+                      <property name="rely">0.01</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="label16">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 14 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="text" translatable="yes">Image to use, dimensions should be around 82:121:</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.03</property>
+                      <property name="rely">0.09</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="pygubu.builder.widgets.pathchooserinput" id="sleeveDxPath">
+                    <property name="title" translatable="yes">Image to Replace Sleeve</property>
+                    <property name="type">file</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.03</property>
+                      <property name="rely">0.15</property>
+                      <property name="width">800</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="pygubu.builder.widgets.scrollbarhelper" id="scrollbarhelper3">
+                    <property name="scrolltype">both</property>
+                    <property name="usemousewheel">false</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relheight">0.66</property>
+                      <property name="relwidth">0.55</property>
+                      <property name="relx">0.03</property>
+                      <property name="rely">0.32</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                    <child>
+                      <object class="tk.Text" id="sleevesDx">
+                        <property name="background">#1B2838</property>
+                        <property name="cursor">hand2</property>
+                        <property name="height">10</property>
+                        <property name="highlightbackground">#1B2838</property>
+                        <property name="setgrid">false</property>
+                        <property name="width">50</property>
+                        <layout manager="pack">
+                          <property name="side">top</property>
+                        </layout>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Button" id="button11">
+                    <property name="activebackground">#379</property>
+                    <property name="activeforeground">#eee</property>
+                    <property name="background">#59c</property>
+                    <property name="borderwidth">0</property>
+                    <property name="command" type="command" cbtype="simple">replace_sleeve_dx</property>
+                    <property name="cursor">hand2</property>
+                    <property name="font">{Helvetica} 12 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="padx">5</property>
+                    <property name="pady">5</property>
+                    <property name="text" translatable="yes">Replace</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.31</property>
+                      <property name="rely">0.22</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Button" id="button12">
+                    <property name="activebackground">#379</property>
+                    <property name="activeforeground">#eee</property>
+                    <property name="background">#579</property>
+                    <property name="borderwidth">0</property>
+                    <property name="command" type="command" cbtype="simple">extract_sleeve_dx</property>
+                    <property name="cursor">hand2</property>
+                    <property name="font">{Helvetica} 12 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="padx">13</property>
+                    <property name="pady">5</property>
+                    <property name="text" translatable="yes">Extract</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.42</property>
+                      <property name="rely">0.22</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="label17">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 14 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="text" translatable="yes"> Select the sleeve frame to replace from the gallery</property>
+                    <property name="wraplength">800</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.17</property>
+                      <property name="rely">0.288</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Frame" id="frame7">
+                    <property name="background">#1B2838</property>
+                    <property name="height">200</property>
+                    <property name="width">200</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relheight">0.83</property>
+                      <property name="relwidth">0.62</property>
+                      <property name="relx">1.0</property>
+                      <property name="rely">0.22</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Separator" id="separator3">
+                    <property name="orient">horizontal</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relheight">0.66</property>
+                      <property name="relwidth">0.0005</property>
+                      <property name="relx">0.305</property>
+                      <property name="rely">0.32</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Checkbutton" id="checkSleeveDx">
+                    <property name="text" translatable="yes">Add black borders to the image</property>
+                    <property name="variable">int:tehe</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.03</property>
+                      <property name="rely">0.23</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Button" id="sleeve_dx" named="True">
+                    <property name="activebackground">#579</property>
+                    <property name="activeforeground">#eee</property>
+                    <property name="background">#779</property>
+                    <property name="borderwidth">0</property>
+                    <property name="command" type="command" cbtype="with_wid">copy_bundle</property>
+                    <property name="cursor">hand2</property>
+                    <property name="font">{Helvetica} 12 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="padx">16</property>
+                    <property name="pady">5</property>
+                    <property name="relief">flat</property>
+                    <property name="text" translatable="yes">Copy</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.53</property>
+                      <property name="rely">0.22</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Notebook.Tab" id="tabCards">
+            <property name="compound">bottom</property>
+            <property name="text" translatable="yes">  Card Art  </property>
+            <child>
+              <object class="tk.Frame" id="frameCards">
+                <property name="background">#1B2838</property>
+                <property name="height">200</property>
+                <property name="width">200</property>
+                <layout manager="pack">
+                  <property name="side">top</property>
+                </layout>
+                <child>
+                  <object class="tk.Label" id="lbg2">
+                    <property name="background">#1B2838</property>
+                    <property name="image">res/bg.png</property>
+                    <property name="relief">flat</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Combobox" id="cbName">
+                    <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="get_card_art" add="" />
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relheight">0.03</property>
+                      <property name="relwidth">0.4</property>
+                      <property name="relx">0.1</property>
+                      <property name="rely">0.16</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="cardArt">
+                    <property name="image">res/art.png</property>
+                    <property name="text" translatable="yes">label1</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.61</property>
+                      <property name="rely">0.18</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="label1">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 14 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="justify">center</property>
+                    <property name="text" translatable="yes">Search for the card to replace bellow, it should suggest cards containing the typed text</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.03</property>
+                      <property name="rely">0.06</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="label2">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 14 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="text" translatable="yes">Image to use, dimensions should be around 1:1</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.16</property>
+                      <property name="rely">0.26</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="pygubu.builder.widgets.pathchooserinput" id="cardPath">
+                    <property name="title" translatable="yes">Image to replace art</property>
+                    <property name="type">file</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relwidth">0.45</property>
+                      <property name="relx">0.08</property>
+                      <property name="rely">0.32</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Button" id="bArt">
+                    <property name="activebackground">#379</property>
+                    <property name="activeforeground">#eee</property>
+                    <property name="background">#59c</property>
+                    <property name="borderwidth">0</property>
+                    <property name="command" type="command" cbtype="simple">replace_art</property>
+                    <property name="cursor">hand2</property>
+                    <property name="font">{Helvetica} 12 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="padx">5</property>
+                    <property name="pady">5</property>
+                    <property name="text" translatable="yes">Replace</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.12</property>
+                      <property name="rely">0.42</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Button" id="button2">
+                    <property name="activebackground">#379</property>
+                    <property name="activeforeground">#eee</property>
+                    <property name="background">#579</property>
+                    <property name="borderwidth">0</property>
+                    <property name="command" type="command" cbtype="simple">extract_art</property>
+                    <property name="cursor">hand2</property>
+                    <property name="font">{Helvetica} 12 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="padx">10</property>
+                    <property name="pady">5</property>
+                    <property name="relief">flat</property>
+                    <property name="text" translatable="yes">Extract</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.27</property>
+                      <property name="rely">0.42</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Button" id="button6">
+                    <property name="activebackground">#379</property>
+                    <property name="activeforeground">#eee</property>
+                    <property name="background">#4ab</property>
+                    <property name="borderwidth">0</property>
+                    <property name="command" type="command" cbtype="simple">set_background</property>
+                    <property name="cursor">hand2</property>
+                    <property name="font">{Helvetica} 11 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="padx">5</property>
+                    <property name="pady">5</property>
+                    <property name="text" translatable="yes">Set Background</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.195</property>
+                      <property name="rely">0.79</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Frame" id="blockerArt">
+                    <property name="background">#1B2838</property>
+                    <property name="height">200</property>
+                    <property name="width">200</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relheight">1.0</property>
+                      <property name="relwidth">1.0</property>
+                      <property name="relx">1.0</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="label11">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 12 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="text" translatable="yes">Sets the image informed as the app's background. Dimensions should be around 1400x800.</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.06</property>
+                      <property name="rely">0.73</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Button" id="button17">
+                    <property name="activebackground">#379</property>
+                    <property name="activeforeground">#eee</property>
+                    <property name="background">#289</property>
+                    <property name="borderwidth">0</property>
+                    <property name="command" type="command" cbtype="simple">reset_background</property>
+                    <property name="cursor">hand2</property>
+                    <property name="font">{Helvetica} 11 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="padx">40</property>
+                    <property name="pady">5</property>
+                    <property name="text" translatable="yes">Reset</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.326</property>
+                      <property name="rely">0.79</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Button" id="card_art" named="True">
+                    <property name="activebackground">#579</property>
+                    <property name="activeforeground">#eee</property>
+                    <property name="background">#779</property>
+                    <property name="borderwidth">0</property>
+                    <property name="command" type="command" cbtype="with_wid">copy_bundle</property>
+                    <property name="cursor">hand2</property>
+                    <property name="font">{Helvetica} 12 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="padx">16</property>
+                    <property name="pady">5</property>
+                    <property name="relief">flat</property>
+                    <property name="text" translatable="yes">Copy</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.42</property>
+                      <property name="rely">0.42</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Notebook.Tab" id="tabFace">
+            <property name="compound">bottom</property>
+            <property name="text" translatable="yes">Card Face</property>
+            <child>
+              <object class="tk.Frame" id="frame13">
+                <property name="background">#1B2838</property>
+                <property name="height">200</property>
+                <property name="width">200</property>
+                <layout manager="pack">
+                  <property name="side">top</property>
+                </layout>
+                <child>
+                  <object class="tk.Label" id="lbg12">
+                    <property name="background">#1B2838</property>
+                    <property name="image">res/bg.png</property>
+                    <property name="relief">flat</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Frame" id="frame14">
+                    <property name="background">#2B3848</property>
+                    <property name="borderwidth">2</property>
+                    <property name="height">200</property>
+                    <property name="relief">raised</property>
+                    <property name="width">200</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relheight">1.1</property>
+                      <property name="relwidth">0.557</property>
+                      <property name="relx">0.445</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Combobox" id="cbCard">
+                    <property name="state">readonly</property>
+                    <property name="values">1 2 3</property>
+                    <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="get_face" add="" />
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relheight">0.03</property>
+                      <property name="relwidth">0.4</property>
+                      <property name="relx">0.03</property>
+                      <property name="rely">0.12</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="face">
+                    <property name="background">#2B3848</property>
+                    <property name="relief">flat</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.55</property>
+                      <property name="rely">0.02</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="label37">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 14 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="justify">center</property>
+                    <property name="text" translatable="yes">Select the type of card to replace bellow:</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.110</property>
+                      <property name="rely">0.07</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="label40">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 16 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="justify">center</property>
+                    <property name="text" translatable="yes">Image to use, dimensions should be around 82:121</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.055</property>
+                      <property name="rely">0.32</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="pygubu.builder.widgets.pathchooserinput" id="facePath">
+                    <property name="title" translatable="yes">Image to replace art</property>
+                    <property name="type">file</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relwidth">0.405</property>
+                      <property name="relx">0.03</property>
+                      <property name="rely">0.36</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Button" id="button21">
+                    <property name="activebackground">#379</property>
+                    <property name="activeforeground">#eee</property>
+                    <property name="background">#59c</property>
+                    <property name="borderwidth">0</property>
+                    <property name="command" type="command" cbtype="simple">replace_face</property>
+                    <property name="cursor">hand2</property>
+                    <property name="font">{Helvetica} 12 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="padx">5</property>
+                    <property name="pady">5</property>
+                    <property name="text" translatable="yes">Replace</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.13</property>
+                      <property name="rely">0.47</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Button" id="button22">
+                    <property name="activebackground">#379</property>
+                    <property name="activeforeground">#eee</property>
+                    <property name="background">#579</property>
+                    <property name="borderwidth">0</property>
+                    <property name="command" type="command" cbtype="simple">extract_face</property>
+                    <property name="cursor">hand2</property>
+                    <property name="font">{Helvetica} 12 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="padx">10</property>
+                    <property name="pady">5</property>
+                    <property name="relief">flat</property>
+                    <property name="text" translatable="yes">Extract</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.27</property>
+                      <property name="rely">0.47</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Frame" id="frame15">
+                    <property name="background">#1B2838</property>
+                    <property name="height">200</property>
+                    <property name="width">200</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relheight">1.0</property>
+                      <property name="relwidth">1.0</property>
+                      <property name="relx">1.0</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Notebook.Tab" id="tabField">
+            <property name="text" translatable="yes">    Fields    </property>
+            <child>
+              <object class="tk.Frame" id="frame1">
+                <property name="background">#1B2838</property>
+                <property name="height">200</property>
+                <property name="width">200</property>
+                <layout manager="pack">
+                  <property name="side">top</property>
+                </layout>
+                <child>
+                  <object class="tk.Label" id="lbg3">
+                    <property name="background">#1B2838</property>
+                    <property name="image">res/bg.png</property>
+                    <property name="relief">flat</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="pygubu.builder.widgets.scrollbarhelper" id="scrollbarhelper2">
+                    <property name="scrolltype">both</property>
+                    <property name="usemousewheel">false</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relheight">0.52</property>
+                      <property name="relwidth">0.97</property>
+                      <property name="relx">0.015</property>
+                      <property name="rely">0.47</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                    <child>
+                      <object class="tk.Text" id="fields">
+                        <property name="background">#1B2838</property>
+                        <property name="cursor">hand2</property>
+                        <property name="height">10</property>
+                        <property name="highlightbackground">#1B2838</property>
+                        <property name="setgrid">false</property>
+                        <property name="width">50</property>
+                        <layout manager="pack">
+                          <property name="side">top</property>
+                        </layout>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Label" id="label3">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 14 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="text" translatable="yes">Choose the field bellow:</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.03</property>
+                      <property name="rely">0.43</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Label" id="label5">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 14 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="text" translatable="yes">Inform the image to use, 
+dimensions should be around 75:26</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.03</property>
+                      <property name="rely">0.03</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="pygubu.builder.widgets.pathchooserinput" id="fieldPath">
+                    <property name="title" translatable="yes">Image to replace field</property>
+                    <property name="type">file</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relwidth">0.29</property>
+                      <property name="relx">0.03</property>
+                      <property name="rely">0.13</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="field">
+                    <property name="background">#1B2838</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.34</property>
+                      <property name="rely">0.03</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Button" id="button4">
+                    <property name="activebackground">#379</property>
+                    <property name="activeforeground">#eee</property>
+                    <property name="background">#59c</property>
+                    <property name="borderwidth">0</property>
+                    <property name="command" type="command" cbtype="simple">replace_field</property>
+                    <property name="cursor">hand2</property>
+                    <property name="font">{Helvetica} 12 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="padx">5</property>
+                    <property name="pady">5</property>
+                    <property name="text" translatable="yes">Replace</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.07</property>
+                      <property name="rely">0.31</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Button" id="button5">
+                    <property name="activebackground">#379</property>
+                    <property name="activeforeground">#eee</property>
+                    <property name="background">#579</property>
+                    <property name="borderwidth">0</property>
+                    <property name="command" type="command" cbtype="simple">extract_field</property>
+                    <property name="cursor">hand2</property>
+                    <property name="font">{Helvetica} 12 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="padx">10</property>
+                    <property name="pady">5</property>
+                    <property name="relief">flat</property>
+                    <property name="text" translatable="yes">Extract</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.16</property>
+                      <property name="rely">0.31</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Checkbutton" id="filterField">
+                    <property name="text" translatable="yes">Apply a filter to show where the zones are</property>
+                    <property name="variable">int:apply_field</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.03</property>
+                      <property name="rely">0.22</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Button" id="mat" named="True">
+                    <property name="activebackground">#579</property>
+                    <property name="activeforeground">#eee</property>
+                    <property name="background">#779</property>
+                    <property name="borderwidth">0</property>
+                    <property name="command" type="command" cbtype="with_wid">copy_bundle</property>
+                    <property name="cursor">hand2</property>
+                    <property name="font">{Helvetica} 12 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="padx">16</property>
+                    <property name="pady">5</property>
+                    <property name="relief">flat</property>
+                    <property name="text" translatable="yes">Copy</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.25</property>
+                      <property name="rely">0.31</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Notebook.Tab" id="tabIcons">
+            <property name="compound">top</property>
+            <property name="text" translatable="yes">    Icons    </property>
+            <child>
+              <object class="tk.Frame" id="frame2">
+                <property name="background">#1B2838</property>
+                <property name="height">200</property>
+                <property name="width">200</property>
+                <layout manager="pack">
+                  <property name="side">top</property>
+                </layout>
+                <child>
+                  <object class="tk.Label" id="lbg4">
+                    <property name="background">#1B2838</property>
+                    <property name="image">res/bg.png</property>
+                    <property name="relief">flat</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="pygubu.builder.widgets.scrollbarhelper" id="scrollbarhelper4">
+                    <property name="scrolltype">both</property>
+                    <property name="usemousewheel">false</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relheight">0.66</property>
+                      <property name="relwidth">0.97</property>
+                      <property name="relx">0.015</property>
+                      <property name="rely">0.32</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                    <child>
+                      <object class="tk.Text" id="icons">
+                        <property name="background">#1B2838</property>
+                        <property name="cursor">hand2</property>
+                        <property name="height">10</property>
+                        <property name="highlightbackground">#1B2838</property>
+                        <property name="setgrid">false</property>
+                        <property name="width">50</property>
+                        <layout manager="pack">
+                          <property name="side">top</property>
+                        </layout>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="icon">
+                    <property name="background">#1B2838</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.75</property>
+                      <property name="rely">0.03</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Label" id="label9">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 14 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="text" translatable="yes">Choose the icon bellow:</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.41</property>
+                      <property name="rely">0.29</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Label" id="label10">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 14 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="text" translatable="yes">Image to use, dimensions should be around 1:1:</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.03</property>
+                      <property name="rely">0.03</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="pygubu.builder.widgets.pathchooserinput" id="iconPath">
+                    <property name="title" translatable="yes">Image to replace icon</property>
+                    <property name="type">file</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relwidth">0.29</property>
+                      <property name="relx">0.03</property>
+                      <property name="rely">0.10</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Button" id="button9">
+                    <property name="activebackground">#379</property>
+                    <property name="activeforeground">#eee</property>
+                    <property name="background">#59c</property>
+                    <property name="borderwidth">0</property>
+                    <property name="command" type="command" cbtype="simple">replace_icon</property>
+                    <property name="cursor">hand2</property>
+                    <property name="font">{Helvetica} 12 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="padx">5</property>
+                    <property name="pady">5</property>
+                    <property name="text" translatable="yes">Replace</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.07</property>
+                      <property name="rely">0.20</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Button" id="button10">
+                    <property name="activebackground">#379</property>
+                    <property name="activeforeground">#eee</property>
+                    <property name="background">#579</property>
+                    <property name="borderwidth">0</property>
+                    <property name="command" type="command" cbtype="simple">extract_icon</property>
+                    <property name="cursor">hand2</property>
+                    <property name="font">{Helvetica} 12 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="padx">10</property>
+                    <property name="pady">5</property>
+                    <property name="relief">flat</property>
+                    <property name="text" translatable="yes">Extract</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.16</property>
+                      <property name="rely">0.20</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Button" id="player_icon" named="True">
+                    <property name="activebackground">#579</property>
+                    <property name="activeforeground">#eee</property>
+                    <property name="background">#779</property>
+                    <property name="borderwidth">0</property>
+                    <property name="command" type="command" cbtype="with_wid">copy_bundle</property>
+                    <property name="cursor">hand2</property>
+                    <property name="font">{Helvetica} 12 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="padx">16</property>
+                    <property name="pady">5</property>
+                    <property name="relief">flat</property>
+                    <property name="text" translatable="yes">Copy</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.25</property>
+                      <property name="rely">0.20</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Notebook.Tab" id="tabWallpaper">
+            <property name="compound">bottom</property>
+            <property name="text" translatable="yes">Home Art</property>
+            <child>
+              <object class="tk.Frame" id="frame3">
+                <property name="background">#1B2838</property>
+                <property name="height">200</property>
+                <property name="width">200</property>
+                <layout manager="pack">
+                  <property name="side">top</property>
+                </layout>
+                <child>
+                  <object class="tk.Label" id="lbg5">
+                    <property name="background">#1B2838</property>
+                    <property name="image">res/bg.png</property>
+                    <property name="relief">flat</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Frame" id="frame5">
+                    <property name="background">#2B3848</property>
+                    <property name="borderwidth">2</property>
+                    <property name="height">200</property>
+                    <property name="relief">raised</property>
+                    <property name="width">200</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relheight">1.1</property>
+                      <property name="relwidth">0.557</property>
+                      <property name="relx">0.445</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Combobox" id="cbWP">
+                    <property name="state">readonly</property>
+                    <property name="values">1 2 3</property>
+                    <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="get_wallpaper_art" add="" />
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relheight">0.03</property>
+                      <property name="relwidth">0.4</property>
+                      <property name="relx">0.03</property>
+                      <property name="rely">0.12</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="wallpaper">
+                    <property name="background">#2B3848</property>
+                    <property name="relief">flat</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.45</property>
+                      <property name="rely">0.00</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="ratio">
+                    <property name="background">#2B3848</property>
+                    <property name="borderwidth">1</property>
+                    <property name="font">{Helvetica} 16 {}</property>
+                    <property name="foreground">#fff</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.45</property>
+                      <property name="rely">0.00</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="label13">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 14 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="justify">center</property>
+                    <property name="text" translatable="yes">Select the art to replace bellow:</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.13</property>
+                      <property name="rely">0.07</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="label14">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 16 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="justify">center</property>
+                    <property name="text" translatable="yes">Image to use, dimensions should be around the ones
+provided with the monster art:</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.05</property>
+                      <property name="rely">0.27</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="pygubu.builder.widgets.pathchooserinput" id="wppPath">
+                    <property name="title" translatable="yes">Image to replace art</property>
+                    <property name="type">file</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relwidth">0.405</property>
+                      <property name="relx">0.03</property>
+                      <property name="rely">0.36</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Button" id="button7">
+                    <property name="activebackground">#379</property>
+                    <property name="activeforeground">#eee</property>
+                    <property name="background">#59c</property>
+                    <property name="borderwidth">0</property>
+                    <property name="command" type="command" cbtype="simple">replace_wallpaper</property>
+                    <property name="cursor">hand2</property>
+                    <property name="font">{Helvetica} 12 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="padx">5</property>
+                    <property name="pady">5</property>
+                    <property name="text" translatable="yes">Replace</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.10</property>
+                      <property name="rely">0.47</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Button" id="button8">
+                    <property name="activebackground">#379</property>
+                    <property name="activeforeground">#eee</property>
+                    <property name="background">#579</property>
+                    <property name="borderwidth">0</property>
+                    <property name="command" type="command" cbtype="simple">extract_wallpaper</property>
+                    <property name="cursor">hand2</property>
+                    <property name="font">{Helvetica} 12 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="padx">10</property>
+                    <property name="pady">5</property>
+                    <property name="relief">flat</property>
+                    <property name="text" translatable="yes">Extract</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.20</property>
+                      <property name="rely">0.47</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Frame" id="frame4">
+                    <property name="background">#1B2838</property>
+                    <property name="height">200</property>
+                    <property name="width">200</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relheight">1.0</property>
+                      <property name="relwidth">1.0</property>
+                      <property name="relx">1.0</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Button" id="home_art" named="True">
+                    <property name="activebackground">#579</property>
+                    <property name="activeforeground">#eee</property>
+                    <property name="background">#779</property>
+                    <property name="borderwidth">0</property>
+                    <property name="command" type="command" cbtype="with_wid">copy_bundle</property>
+                    <property name="cursor">hand2</property>
+                    <property name="font">{Helvetica} 12 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="padx">16</property>
+                    <property name="pady">5</property>
+                    <property name="relief">flat</property>
+                    <property name="text" translatable="yes">Copy</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.30</property>
+                      <property name="rely">0.47</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Notebook.Tab" id="tabBack">
+            <property name="compound">top</property>
+            <property name="text" translatable="yes"> Home BG </property>
+            <child>
+              <object class="tk.Frame" id="frame12">
+                <property name="background">#1B2838</property>
+                <property name="height">200</property>
+                <property name="width">200</property>
+                <layout manager="pack">
+                  <property name="side">top</property>
+                </layout>
+                <child>
+                  <object class="tk.Label" id="lbg11">
+                    <property name="background">#1B2838</property>
+                    <property name="image">res/bg.png</property>
+                    <property name="relief">flat</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="homeBg">
+                    <property name="background">#1B2838</property>
+                    <property name="borderwidth">0</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.105</property>
+                      <property name="rely">0.16</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Label" id="label35">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 14 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="text" translatable="yes">Inform the image to use, it should be around 1920:1080:</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.03</property>
+                      <property name="rely">0.03</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Button" id="button19">
+                    <property name="activebackground">#379</property>
+                    <property name="activeforeground">#eee</property>
+                    <property name="background">#59c</property>
+                    <property name="borderwidth">0</property>
+                    <property name="command" type="command" cbtype="simple">replace_home_bg</property>
+                    <property name="cursor">hand2</property>
+                    <property name="font">{Helvetica} 12 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="padx">5</property>
+                    <property name="pady">5</property>
+                    <property name="text" translatable="yes">Replace</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.82</property>
+                      <property name="rely">0.03</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="pygubu.builder.widgets.pathchooserinput" id="homePath">
+                    <property name="title" translatable="yes">Image to replace art</property>
+                    <property name="type">file</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relwidth">0.405</property>
+                      <property name="relx">0.4</property>
+                      <property name="rely">0.03</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Label" id="label38">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 14 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="text" translatable="yes">Current Background:</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.03</property>
+                      <property name="rely">0.09</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Button" id="button20">
+                    <property name="activebackground">#379</property>
+                    <property name="activeforeground">#eee</property>
+                    <property name="background">#579</property>
+                    <property name="borderwidth">0</property>
+                    <property name="command" type="command" cbtype="simple">extract_home_bg</property>
+                    <property name="cursor">hand2</property>
+                    <property name="font">{Helvetica} 12 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="padx">10</property>
+                    <property name="pady">5</property>
+                    <property name="relief">flat</property>
+                    <property name="text" translatable="yes">Extract</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.9</property>
+                      <property name="rely">0.03</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Notebook.Tab" id="tabGraves">
+            <property name="compound">top</property>
+            <property name="text" translatable="yes">   Graves    </property>
+            <child>
+              <object class="tk.Frame" id="frame8">
+                <property name="background">#1B2838</property>
+                <property name="height">200</property>
+                <property name="width">200</property>
+                <layout manager="pack">
+                  <property name="side">top</property>
+                </layout>
+                <child>
+                  <object class="tk.Label" id="lbg7">
+                    <property name="background">#1B2838</property>
+                    <property name="image">res/bg.png</property>
+                    <property name="relief">flat</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="pygubu.builder.widgets.scrollbarhelper" id="scrollbarhelper5">
+                    <property name="scrolltype">both</property>
+                    <property name="usemousewheel">false</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relheight">0.44</property>
+                      <property name="relwidth">0.97</property>
+                      <property name="relx">0.015</property>
+                      <property name="rely">0.535</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                    <child>
+                      <object class="tk.Text" id="graves">
+                        <property name="background">#1B2838</property>
+                        <property name="cursor">hand2</property>
+                        <property name="height">10</property>
+                        <property name="highlightbackground">#1B2838</property>
+                        <property name="setgrid">false</property>
+                        <property name="width">50</property>
+                        <layout manager="pack">
+                          <property name="side">top</property>
+                        </layout>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="grave1">
+                    <property name="background">#1B2838</property>
+                    <property name="borderwidth">0</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.4</property>
+                      <property name="rely">0.13</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="grave2">
+                    <property name="background">#1B2838</property>
+                    <property name="borderwidth">0</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.84</property>
+                      <property name="rely">0.13</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Label" id="label15">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 14 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="text" translatable="yes">Choose the graves bellow:</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.40</property>
+                      <property name="rely">0.50</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Label" id="label18">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 14 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="text" translatable="yes">Left click on one grave and right click on another
+to select them for swapping.</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.03</property>
+                      <property name="rely">0.03</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Button" id="button13">
+                    <property name="activebackground">#379</property>
+                    <property name="activeforeground">#eee</property>
+                    <property name="background">#59c</property>
+                    <property name="borderwidth">0</property>
+                    <property name="command" type="command" cbtype="simple">swap_graves</property>
+                    <property name="cursor">hand2</property>
+                    <property name="font">{Helvetica} 12 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="padx">15</property>
+                    <property name="pady">5</property>
+                    <property name="text" translatable="yes">Swap</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.15</property>
+                      <property name="rely">0.20</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Label" id="label8">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 14 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="text" translatable="yes">Grave 1</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.445</property>
+                      <property name="rely">0.39</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Label" id="label12">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 14 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="text" translatable="yes">Grave 2</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.888</property>
+                      <property name="rely">0.39</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Notebook.Tab" id="tabBases">
+            <property name="compound">top</property>
+            <property name="text" translatable="yes">Mate Bases </property>
+            <child>
+              <object class="tk.Frame" id="frame9">
+                <property name="background">#1B2838</property>
+                <property name="height">200</property>
+                <property name="width">200</property>
+                <layout manager="pack">
+                  <property name="side">top</property>
+                </layout>
+                <child>
+                  <object class="tk.Label" id="lbg8">
+                    <property name="background">#1B2838</property>
+                    <property name="image">res/bg.png</property>
+                    <property name="relief">flat</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="pygubu.builder.widgets.scrollbarhelper" id="scrollbarhelper6">
+                    <property name="scrolltype">both</property>
+                    <property name="usemousewheel">false</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relheight">0.44</property>
+                      <property name="relwidth">0.97</property>
+                      <property name="relx">0.015</property>
+                      <property name="rely">0.535</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                    <child>
+                      <object class="tk.Text" id="bases">
+                        <property name="background">#1B2838</property>
+                        <property name="cursor">hand2</property>
+                        <property name="height">10</property>
+                        <property name="highlightbackground">#1B2838</property>
+                        <property name="setgrid">false</property>
+                        <property name="width">50</property>
+                        <layout manager="pack">
+                          <property name="side">top</property>
+                        </layout>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="base1">
+                    <property name="background">#1B2838</property>
+                    <property name="borderwidth">0</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.4</property>
+                      <property name="rely">0.13</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="base2">
+                    <property name="background">#1B2838</property>
+                    <property name="borderwidth">0</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.84</property>
+                      <property name="rely">0.13</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Label" id="label22">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 14 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="text" translatable="yes">Choose the bases bellow:</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.40</property>
+                      <property name="rely">0.50</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Label" id="label23">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 14 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="text" translatable="yes">Left click on one base and right click on another
+to select them for swapping.</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.03</property>
+                      <property name="rely">0.03</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Button" id="button14">
+                    <property name="activebackground">#379</property>
+                    <property name="activeforeground">#eee</property>
+                    <property name="background">#59c</property>
+                    <property name="borderwidth">0</property>
+                    <property name="command" type="command" cbtype="simple">swap_bases</property>
+                    <property name="cursor">hand2</property>
+                    <property name="font">{Helvetica} 12 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="padx">15</property>
+                    <property name="pady">5</property>
+                    <property name="text" translatable="yes">Swap</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.15</property>
+                      <property name="rely">0.20</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Label" id="label24">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 14 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="text" translatable="yes">Base 1</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.445</property>
+                      <property name="rely">0.39</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Label" id="label25">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 14 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="text" translatable="yes">Base 2</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.888</property>
+                      <property name="rely">0.39</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Notebook.Tab" id="tabFields">
+            <property name="compound">top</property>
+            <property name="text" translatable="yes"> Full Fields </property>
+            <child>
+              <object class="tk.Frame" id="frame10">
+                <property name="background">#1B2838</property>
+                <property name="height">200</property>
+                <property name="width">200</property>
+                <layout manager="pack">
+                  <property name="side">top</property>
+                </layout>
+                <child>
+                  <object class="tk.Label" id="lbg9">
+                    <property name="background">#1B2838</property>
+                    <property name="image">res/bg.png</property>
+                    <property name="relief">flat</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="pygubu.builder.widgets.scrollbarhelper" id="scrollbarhelper7">
+                    <property name="scrolltype">both</property>
+                    <property name="usemousewheel">false</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relheight">0.44</property>
+                      <property name="relwidth">0.97</property>
+                      <property name="relx">0.015</property>
+                      <property name="rely">0.535</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                    <child>
+                      <object class="tk.Text" id="full_fields">
+                        <property name="background">#1B2838</property>
+                        <property name="cursor">hand2</property>
+                        <property name="height">10</property>
+                        <property name="highlightbackground">#1B2838</property>
+                        <property name="setgrid">false</property>
+                        <property name="width">50</property>
+                        <layout manager="pack">
+                          <property name="side">top</property>
+                        </layout>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="full_field1">
+                    <property name="background">#1B2838</property>
+                    <property name="borderwidth">0</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.4</property>
+                      <property name="rely">0.13</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="full_field2">
+                    <property name="background">#1B2838</property>
+                    <property name="borderwidth">0</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.84</property>
+                      <property name="rely">0.13</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Label" id="label26">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 14 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="text" translatable="yes">Choose the fields bellow:</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.40</property>
+                      <property name="rely">0.50</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Label" id="label27">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 14 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="text" translatable="yes">Left click on one field and right click on another
+to select them for swapping.</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.03</property>
+                      <property name="rely">0.03</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Button" id="button15">
+                    <property name="activebackground">#379</property>
+                    <property name="activeforeground">#eee</property>
+                    <property name="background">#59c</property>
+                    <property name="borderwidth">0</property>
+                    <property name="command" type="command" cbtype="simple">swap_fields</property>
+                    <property name="cursor">hand2</property>
+                    <property name="font">{Helvetica} 12 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="padx">15</property>
+                    <property name="pady">5</property>
+                    <property name="text" translatable="yes">Swap</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.15</property>
+                      <property name="rely">0.20</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Label" id="label28">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 14 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="text" translatable="yes">Field 1</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.445</property>
+                      <property name="rely">0.39</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Label" id="label29">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 14 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="text" translatable="yes">Field 2</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.888</property>
+                      <property name="rely">0.39</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Notebook.Tab" id="tabMate">
+            <property name="compound">top</property>
+            <property name="text" translatable="yes">    Mates    </property>
+            <child>
+              <object class="tk.Frame" id="frame11">
+                <property name="background">#1B2838</property>
+                <property name="height">200</property>
+                <property name="width">200</property>
+                <layout manager="pack">
+                  <property name="side">top</property>
+                </layout>
+                <child>
+                  <object class="tk.Label" id="lbg10">
+                    <property name="background">#1B2838</property>
+                    <property name="image">res/bg.png</property>
+                    <property name="relief">flat</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="pygubu.builder.widgets.scrollbarhelper" id="scrollbarhelper8">
+                    <property name="scrolltype">both</property>
+                    <property name="usemousewheel">false</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relheight">0.44</property>
+                      <property name="relwidth">0.97</property>
+                      <property name="relx">0.015</property>
+                      <property name="rely">0.535</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                    <child>
+                      <object class="tk.Text" id="mates">
+                        <property name="background">#1B2838</property>
+                        <property name="cursor">hand2</property>
+                        <property name="height">10</property>
+                        <property name="highlightbackground">#1B2838</property>
+                        <property name="setgrid">false</property>
+                        <property name="width">50</property>
+                        <layout manager="pack">
+                          <property name="side">top</property>
+                        </layout>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="mate1">
+                    <property name="background">#1B2838</property>
+                    <property name="borderwidth">0</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.4</property>
+                      <property name="rely">0.13</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="mate2">
+                    <property name="background">#1B2838</property>
+                    <property name="borderwidth">0</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.84</property>
+                      <property name="rely">0.13</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Label" id="label30">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 14 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="text" translatable="yes">Choose the mates bellow:</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.40</property>
+                      <property name="rely">0.50</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Label" id="label31">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 14 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="text" translatable="yes">Left click on one mate and right click on another
+to select them for swapping.</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.03</property>
+                      <property name="rely">0.03</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Button" id="button16">
+                    <property name="activebackground">#379</property>
+                    <property name="activeforeground">#eee</property>
+                    <property name="background">#59c</property>
+                    <property name="borderwidth">0</property>
+                    <property name="command" type="command" cbtype="simple">swap_mates</property>
+                    <property name="cursor">hand2</property>
+                    <property name="font">{Helvetica} 12 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="padx">15</property>
+                    <property name="pady">5</property>
+                    <property name="text" translatable="yes">Swap</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.15</property>
+                      <property name="rely">0.20</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Label" id="label32">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 14 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="text" translatable="yes">Mate 1</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.445</property>
+                      <property name="rely">0.39</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Label" id="label33">
+                    <property name="background">#1B2838</property>
+                    <property name="font">{Helvetica} 14 {}</property>
+                    <property name="foreground">#fff</property>
+                    <property name="text" translatable="yes">Mate 2</property>
+                    <layout manager="place">
+                      <property name="anchor">nw</property>
+                      <property name="relx">0.888</property>
+                      <property name="rely">0.39</property>
+                      <property name="x">0</property>
+                      <property name="y">0</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
