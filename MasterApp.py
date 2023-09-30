@@ -207,7 +207,6 @@ class Root:
         self.art_path.config(filetypes=[("Image", self.FILE["IMAGE"])])
         self.field_path.config(filetypes=[("Image", self.FILE["IMAGE"])])
         self.wallpaper_path[0].config(filetypes=[("Image", self.FILE["IMAGE"])])
-        # TODO add support for wallpaper background replacement
         self.icon_path.config(filetypes=[(".png Image", "*.png")])
         self.home_path.config(filetypes=[("Image", self.FILE["IMAGE"])])
 
@@ -359,7 +358,7 @@ class Root:
         ):
             self.data["gamePath"] = self.game_path.cget("path")
             self.data["lastWallpaper"][0] = self.wallpaper_path[0].cget("path")
-            # self.data["lastWallpaper"][1] = self.wallpaperPath[1].cget('path')
+            # TODO add support for wallpaper background replacement
             self.update_json()
             size = 0
             for part in self.data["wallpaper"][self.wallpaper_box.current()]:
@@ -1106,7 +1105,7 @@ class Root:
                     found = True
 
                 if found:
-                    dest = join("Images", floo.slugify(name) + ".png")
+                    dest = join("images", floo.slugify(name) + ".png")
 
                     img = data.image
                     img.save(dest)
@@ -1132,7 +1131,7 @@ class Root:
                         break
                 else:
                     if asset == data.name:
-                        dest = join("Images", floo.slugify(data.name) + ".png")
+                        dest = join("images", floo.slugify(data.name) + ".png")
 
                         img = data.image
                         img.save(dest)
