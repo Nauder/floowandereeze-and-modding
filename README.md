@@ -11,11 +11,11 @@ assets trivial. It's also able to swap mates and field assets.
 - [Usage](#Usage)
 - [Building](#Building)
     - [Prerequisites](#Prerequisites)
-    - [Cloning the Repository](#Cloning the Repository)
-    - [Setting up a Virtual Environment](#Setting up a Virtual Environment)
-    - [Installing Dependencies](#Installing Dependencies)
-    - [Running the App](#Running the App)
-    - [Creating an Executable](#Creating an Executable)
+    - [Cloning the Repository](#Cloning-the-Repository)
+    - [Setting up a Virtual Environment](#Setting-up-a-Virtual-Environment)
+    - [Installing Dependencies](#Installing-Dependencies)
+    - [Running the App](#Running-the-App)
+    - [Creating an Executable](#Creating-an-Executable)
 
 ## Usage
 
