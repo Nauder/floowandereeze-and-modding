@@ -1,17 +1,17 @@
 # Usage
 
 - [Sleeves](#Sleeves)
-- [Card Art](#Card Art)
-- [Card Face](#Card Face)
+- [Card Art](#Card-Art)
+- [Card Face](#Card-Face)
 - [Field](#Field)
-    - [Field Filter Editing](#Field Filter Editing)
+    - [Field Filter Editing](#Field-Filter-Editing)
 - [Icon](#Icon)
-- [Home Art](#Home Art)
-    - [Aspects of home art replacement](#Aspects of home art replacement)
-- [Home Background](#Home Background)
-- [Field Assets and Mates Swapping](#Field Assets and Mates Swapping)
+- [Home Art](#Home-Art)
+    - [Aspects of home art replacement](#Aspects-of-home-art-replacement)
+- [Home Background](#Home-Background)
+- [Field Assets and Mates Swapping](#Field-Assets-and-Mates-Swapping)
 - [Notes](#Notes)
-- [Known Issues](#Known Issues)
+- [Known Issues](#Known-Issues)
 
 Download the tool from the 'releases' tab or Nexus Mods, then start "Floowandereeze & Modding.exe" found in the
 "Floowandereeze & Modding" folder.
