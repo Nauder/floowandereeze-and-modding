@@ -2,7 +2,7 @@ from os.path import join
 
 from PIL import Image, ImageTk
 
-from util.constants import DATA, FILE, FIELD_FLIP_INDEX
+from util.constants import DATA, FILE, FIELD_FLIP_INDEX, PROJECT_PATH
 from util.image_utils import convert_image, add_sleeve_border, slugify
 from util.unity_utils import prepare_environment
 from UnityPy import load as unity_load
@@ -173,15 +173,15 @@ class UnityService:
                         mat = mat.resize((mat.size[0] * 2, mat.size[1] * 2))
                     mat.thumbnail((2048, mat.size[1]), Image.Resampling.LANCZOS)
                     mat_fit = mat.crop((0, 0, 2048, 712))
-                    if self.field_to_replace < 6:
+                    if self.field_to_replace < FIELD_FLIP_INDEX:
                         img.paste(mat_fit, (0, 311))
                     else:
                         img.paste(mat_fit, (0, 243))
                     if "selected" in filtered:
-                        if self.field_to_replace < 6:
-                            base = Image.open("res/base.png")
+                        if self.field_to_replace < FIELD_FLIP_INDEX:
+                            base = Image.open(f'{PROJECT_PATH}/res/base.png')
                         else:
-                            base = Image.open("res/base_inv.png")
+                            base = Image.open(f'{PROJECT_PATH}/res/base_inv.png')
                         new_mat = Image.new("RGBA", img.size)
                         new_mat = Image.alpha_composite(new_mat, img)
                         new_mat = Image.alpha_composite(new_mat, base)
