@@ -6,8 +6,9 @@
 
 This is a pure Python tool that is able to replace card sleeves, deluxe sleeves, card arts, icons, home arts and
 most fields in the Yu-Gi-Oh! Master Duel game with a user-given image, making the process of creating custom
-assets trivial. It's also able to swap mates and field assets.
+assets trivial. It's also able to swap mates and field assets. 
 
+- [Downloading](#Downloading)
 - [Usage](#Usage)
 - [Building](#Building)
     - [Prerequisites](#Prerequisites)
@@ -16,6 +17,11 @@ assets trivial. It's also able to swap mates and field assets.
     - [Installing Dependencies](#Installing-Dependencies)
     - [Running the App](#Running-the-App)
     - [Creating an Executable](#Creating-an-Executable)
+ 
+## Downloading
+
+Download the app from the "releases" tab. Releases prior to v2.1.0 are available on 
+[Nexus Mods](https://www.nexusmods.com/yugiohmasterduel/mods/372).
 
 ## Usage
 
