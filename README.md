@@ -20,8 +20,9 @@ assets trivial. It's also able to swap mates and field assets.
  
 ## Downloading
 
-Download the latest version of the app from the [releases](https://github.com/Nauder/floowandereeze-and-modding/releases) tab. Releases prior to v2.1.0 are available on 
-[Nexus Mods](https://www.nexusmods.com/yugiohmasterduel/mods/372).
+Download the latest version of the app, and Assets Update if available, from the [releases](https://github.com/Nauder/floowandereeze-and-modding/releases) tab. 
+The Assets Update content should go into the "_internal" folder.
+Releases prior to v2.1.0 are available on [Nexus Mods](https://www.nexusmods.com/yugiohmasterduel/mods/372).
 
 ## Usage
 
