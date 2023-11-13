@@ -76,6 +76,7 @@ if (checkRequirements)
 
     # Build the app
     Write-Host "Building app..."
+    python -c 'import util.data_utils; util.data_utils.reset_data()'
     pyinstaller --noconfirm --onedir --windowed `
     --icon "$PSScriptRoot/res/icon.ico" `
     --name "$BuildName" `
