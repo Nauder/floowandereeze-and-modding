@@ -1,5 +1,6 @@
 from os.path import join
 
+import PIL.ImageOps
 from PIL import Image, ImageTk
 
 from util.constants import DATA, FILE, FIELD_FLIP_INDEX, PROJECT_PATH
@@ -15,6 +16,7 @@ class UnityService:
 
     def __init__(self):
         self._icon_to_replace: int = -1
+        self._box_to_replace: int = -1
         self._field_to_replace: int = -1
         self._sleeve_to_replace: int = -1
         self._graves_to_replace: list[int] = [-1, -1]
@@ -74,29 +76,18 @@ class UnityService:
 
         return self.fetch_image(bundle, aspect, True, simple_aspect)
 
-    def fetch_icon_thumb_list(self) -> list[ImageTk.PhotoImage]:
-        """
+    def replace_box(self, open: bool):
+        box_to_replace: dict = DATA["deck_box"][self._box_to_replace]
 
-        Fetches a list of thumbnail images of icons from the specified game path.
+        for bundle in [box_to_replace["o_medium"], box_to_replace["o_large"]] if open \
+                else [box_to_replace["small"], box_to_replace["medium"], box_to_replace["large"]]:
+            print(f"Replacing {bundle}")
+            self.replace_bundle(bundle, "box")
 
-        :return: A list of ImageTk.PhotoImage objects representing the thumbnail images of icons.
-
-        """
-        images_list = []
-
-        for i in self.first_list:
-            f_path = join(DATA["gamePath"], "0000", i[:2], i)
-            env = unity_load(f_path)
-            for obj in env.objects:
-                if obj.type.name == "Texture2D":
-                    data = obj.read()
-                    img = data.image.resize((129, 129))
-                    img.convert("RGB")
-                    img.name = FILE["IMAGE_NAME"]
-                    icon = ImageTk.PhotoImage(img)
-                    images_list.append(icon)
-
-        return images_list
+        if not open:
+            for bundle in [box_to_replace["r_medium"], box_to_replace["r_large"]]:
+                print(f"Replacing {bundle}")
+                self.replace_bundle(bundle, "rbx")
 
     def replace_bundle(
             self, bundle: str, asset: str, filtered="empty", miss=False, size=-1
@@ -147,6 +138,12 @@ class UnityService:
                     elif size == 2:
                         s = 512
                     img = Image.open(DATA["lastIcon"]).resize((s, s))
+                    found = True
+                elif asset == "box":
+                    img = convert_image(DATA["lastBox"], (data.m_Width, data.m_Height))
+                    found = True
+                elif asset == "rbx":
+                    img = PIL.ImageOps.mirror(convert_image(DATA["lastBox"], (data.m_Width, data.m_Height)))
                     found = True
                 elif asset == "wpp":
                     if size == 0:
@@ -268,6 +265,14 @@ class UnityService:
     @icon_to_replace.setter
     def icon_to_replace(self, value: int):
         self._icon_to_replace = value
+
+    @property
+    def box_to_replace(self) -> int:
+        return self._box_to_replace
+
+    @box_to_replace.setter
+    def box_to_replace(self, value: int):
+        self._box_to_replace = value
 
     @property
     def graves_to_replace(self) -> list[int]:

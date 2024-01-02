@@ -17,13 +17,14 @@ from util.data_utils import update_json
 from util.image_utils import convert_image
 from util.ui_utils import show_message, show_error
 from util.unity_utils import replace_unity3d_asset, fetch_sleeve_thumb_list, fetch_unity3d_image, swap_bundles, \
-    fetch_swap_list, fetch_home_bg, fetch_field_thumb_list, extract_unity3d_image
+    fetch_swap_list, fetch_icon_thumb_list, fetch_home_bg, fetch_field_thumb_list, extract_unity3d_image, \
+    fetch_box_thumb_list
 
 
 # === APP ROOT DEFINITION === #
 
 
-class Root:
+class MasterApp:
     def __init__(self, master=None):
         # === APP STARTUP === #
 
@@ -34,8 +35,10 @@ class Root:
         self.bases_img: list[int] = []
         self.full_fields_img: list[int] = []
         self.icons_img: list[int] = []
+        self.box_img: list[int] = []
         self.mates_img: list[int] = []
         self.home_bg_img: list[int] = []
+        self.box_open: bool = False
         self.builder = builder = Builder()
         builder.add_resource_path(PROJECT_PATH)
         builder.add_from_file(PROJECT_UI)
@@ -47,6 +50,7 @@ class Root:
         self.check_sleeve = builder.get_object("checkSleeve")
         self.field = builder.get_object("field")
         self.icon = builder.get_object("icon")
+        self.box = builder.get_object("box")
         self.field_path = builder.get_object("fieldPath")
         self.filter_field = builder.get_object("filterField")
         self.image_path = builder.get_object("imagePath")
@@ -56,6 +60,7 @@ class Root:
         self.sleeves = builder.get_object("sleeves")
         self.fields = builder.get_object("fields")
         self.graves = builder.get_object("graves")
+        self.boxes = builder.get_object("boxes")
         self.graves_lbl = [builder.get_object("grave1"), builder.get_object("grave2")]
         self.bases = builder.get_object("bases")
         self.bases_lbl = [builder.get_object("base1"), builder.get_object("base2")]
@@ -75,12 +80,13 @@ class Root:
         self.wallpaper_art = builder.get_object("wallpaper")
         self.wallpaper_ratio = builder.get_object("ratio")
         self.icon_path = builder.get_object("iconPath")
+        self.box_path = builder.get_object("boxPath")
         self.home_path = builder.get_object("homePath")
         self.home_bg = builder.get_object("homeBg")
         self.card_box = builder.get_object("cbCard")
         self.face_path = builder.get_object("facePath")
         self.face = builder.get_object("face")
-        self.bg = [builder.get_object("lbg" + str(i)) for i in range(1, 12)]
+        self.bg = [builder.get_object("lbg" + str(i)) for i in range(1, 13)]
 
         self.sleeves.bind(
             BUTTON[0],
@@ -151,6 +157,11 @@ class Root:
             lambda event: self.select_icon_image(int(self.icons.index("current")[2:])),
         )
         self.icons.pack(expand=True, fill="both")
+        self.boxes.bind(
+            BUTTON[0],
+            lambda event: self.select_box_image(int(self.boxes.index("current")[2:])),
+        )
+        self.boxes.pack(expand=True, fill="both")
         self.art_box.bind(
             "<KeyRelease>",
             lambda event: self.art_values(
@@ -285,9 +296,24 @@ class Root:
             for sprite in self.fetch_sprite_list(self.service.icon_to_replace):
                 self.service.replace_bundle(sprite, "ico", False, False, size)
                 size += 1
-            self.fetch_target_thumbnails([["icons", self.service.fetch_icon_thumb_list()]])
+            self.fetch_target_thumbnails([["icons", fetch_icon_thumb_list()]])
             show_message(
                 MESSAGE["REPLACEMENT"], "Icon texture replaced successfully!"
+            )
+
+    def replace_box(self):
+        if (
+                self.game_path.cget("path") is not None
+                and self.box_path.cget("path") is not None
+                and self.service.box_to_replace != -1
+        ):
+            DATA["gamePath"] = self.game_path.cget("path")
+            DATA["lastBox"] = self.box_path.cget("path")
+            update_json()
+            self.service.replace_box(self.box_open)
+            self.fetch_target_thumbnails([["boxes", fetch_box_thumb_list()]])
+            show_message(
+                MESSAGE["REPLACEMENT"], "Box texture replaced successfully!"
             )
 
     def replace_wallpaper(self):
@@ -584,7 +610,8 @@ class Root:
             self.graves_img = fetch_swap_list("grave")
             self.bases_img = fetch_swap_list("base")
             self.full_fields_img = fetch_swap_list("full_field")
-            self.icons_img = self.service.fetch_icon_thumb_list()
+            self.icons_img = fetch_icon_thumb_list()
+            self.box_img = fetch_box_thumb_list()
             self.mates_img = fetch_swap_list("mate")
             self.home_bg_img = fetch_home_bg()
 
@@ -595,6 +622,7 @@ class Root:
                 [self.bases, self.bases_img],
                 [self.full_fields, self.full_fields_img],
                 [self.icons, self.icons_img],
+                [self.boxes, self.box_img],
                 [self.mates, self.mates_img],
             ]
 
@@ -728,6 +756,21 @@ class Root:
         self.icon.configure(image=icon)
         self.icon.image = icon
 
+    def select_box_image(self, index: int) -> None:
+        """Assigns the index of the image selected by the user to the global 'box_to_replace' variable and applies it
+        to the selected box image"""
+
+        self.service.box_to_replace = index // 2
+        self.box_open = index % 2 != 0
+
+        box = ImageTk.PhotoImage(
+            self.service.fetch_image(
+                DATA["deck_box"][self.service.box_to_replace]["small" if self.box_open else "o_medium"],
+                "smp", False, (200, 200))
+        )
+        self.box.configure(image=box)
+        self.box.image = box
+
     def select_card_art(self) -> None:
         """Displays the card art of the card selected in the art combobox on-screen"""
 
@@ -800,4 +843,4 @@ class Root:
 
 
 if __name__ == "__main__":
-    Root().run()
+    MasterApp().run()

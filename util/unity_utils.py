@@ -116,6 +116,49 @@ def fetch_sleeve_thumb_list() -> list[ImageTk.PhotoImage]:
     return images_list
 
 
+def fetch_icon_thumb_list() -> list[ImageTk.PhotoImage]:
+    """
+    Fetches a list of thumbnail images of icons from the specified game path.
+    :return: A list of ImageTk.PhotoImage objects representing the thumbnail images of icons.
+    """
+    images_list = []
+    for i in [DATA["icons"][a][0] for a in DATA["icons"]]:
+        f_path = join(DATA["gamePath"], "0000", i[:2], i)
+        env = unity_load(f_path)
+        for obj in env.objects:
+            if obj.type.name == "Texture2D":
+                data = obj.read()
+                img = data.image.resize((129, 129))
+                img.convert("RGB")
+                img.name = FILE["IMAGE_NAME"]
+                icon = ImageTk.PhotoImage(img)
+                images_list.append(icon)
+
+    return images_list
+
+
+def fetch_box_thumb_list() -> list[ImageTk.PhotoImage]:
+    """
+    Fetches a list of thumbnail images of icons from the specified game path.
+    :return: A list of ImageTk.PhotoImage objects representing the thumbnail images of icons.
+    """
+    images_list = []
+    for i in DATA["deck_box"]:
+        for thumb in [i["small"], i["o_medium"]]:
+            f_path = join(DATA["gamePath"], "0000", thumb[:2], thumb)
+            env = unity_load(f_path)
+            for obj in env.objects:
+                if obj.type.name == "Texture2D":
+                    data = obj.read()
+                    img = data.image.resize((129, 129))
+                    img.convert("RGB")
+                    img.name = FILE["IMAGE_NAME"]
+                    box = ImageTk.PhotoImage(img)
+                    images_list.append(box)
+
+    return images_list
+
+
 def fetch_sleeve_dx_thumb_list() -> list[ImageTk.PhotoImage]:
     """Fetches the deluxe sleeve thumbnail list used by the app"""
 
