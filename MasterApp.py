@@ -425,6 +425,18 @@ class MasterApp:
                 'Icon image exported to the "images" folder!',
             )
 
+    def extract_box(self):
+        if self.game_path.cget("path") is not None and self.service.box_to_replace != -1:
+            for asset in DATA["deck_box"][self.service.box_to_replace]:
+                self.service.extract_texture(
+                    DATA["deck_box"][self.service.box_to_replace][asset],
+                    f"deck_box_{asset}_{self.service.box_to_replace}",
+                )
+            show_message(
+                MESSAGE["EXTRACTION"],
+                'Deck box images exported to the "images" folder!',
+            )
+
     def extract_wallpaper(self):
         if (
                 self.game_path.cget("path") is not None
@@ -559,6 +571,9 @@ class MasterApp:
                 ]
             case "home_art":
                 bundles = DATA["wallpaper"][self.wallpaper_box.current()]
+            case "deck_box":
+                bundles = [DATA["deck_box"][self.service.box_to_replace][asset] for asset in
+                           DATA["deck_box"][self.service.box_to_replace]]
 
         for bundle in bundles:
             copyfile(
@@ -761,7 +776,7 @@ class MasterApp:
         to the selected box image"""
 
         self.service.box_to_replace = index // 2
-        self.box_open = index % 2 != 0
+        self.box_open = index % 2 == 0
 
         box = ImageTk.PhotoImage(
             self.service.fetch_image(
