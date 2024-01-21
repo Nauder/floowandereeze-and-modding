@@ -11,7 +11,8 @@ $OutputDirectories = @(
     "bundles\mat",
     "bundles\player_icon",
     "bundles\sleeve",
-    "bundles\sleeve_dx"
+    "bundles\sleeve_dx",
+    "bundles\deck_box"
 )
 
 function checkRequirements
