@@ -254,375 +254,424 @@
     "Dark Magician",
     "The World Legacy",
     "Ursarctic Radiation",
-    "Number 41: Bagooska the Terribly Tired Tapir"
+    "Number 41: Bagooska the Terribly Tired Tapir",
+    "Rescue-ACE Turbulence",
+    "Master Peace, the True Dracoslayer",
+    "Gold Pride - Star Leon",
+    "Gift Exchange"
   ],
   "wallpaper": [
     [
-      "abcd05c6",
-      "32c4547c"
+      "13f5cf29",
+      "8afc9e93"
     ],
     [
-      "fa11e01b",
-      "6318b1a1"
+      "6aadf393",
+      "f3a4a229"
     ],
     [
-      "2da9a4b2",
-      "b4a0f508"
+      "8ded2680",
+      "14e4773a"
     ],
     [
-      "0874ce7c",
-      "917d9fc6"
+      "e145b65d",
+      "784ce7e7"
     ],
     [
-      "8e106f08",
-      "17193eb2"
+      "7f5d5ff4",
+      "e6540e4e"
     ],
     [
-      "dfcc8ad5",
-      "46c5db6f"
+      "0605634e",
+      "9f0c32f4"
     ],
     [
-      "59a82ba1",
-      "c0a17a1b"
+      "981d8ae7",
+      "0114db5d"
     ],
     [
-      "94765f49",
-      "0d7f0ef3"
+      "df5442f4",
+      "465d134e"
     ],
     [
-      "1212fe3d",
-      "8b1baf87"
+      "414cab5d",
+      "d845fae7"
     ],
     [
-      "2b9b90eb",
-      "b292c151"
+      "5b21199f",
+      "c2284825"
     ],
     [
-      "adff319f",
-      "34f66025"
+      "c539f036",
+      "5c30a18c"
     ],
     [
-      "fc23d442",
-      "652a85f8"
+      "bc61cc8c",
+      "25689d36"
     ],
     [
-      "7a477536",
-      "e34e248c"
+      "22792525",
+      "bb70749f"
     ],
     [
-      "5f9a1ff8",
-      "c6934e42"
+      "4ed1b5f8",
+      "d7d8e442"
     ],
     [
-      "0e46fa25",
-      "78952d67"
+      "37898942",
+      "ae80d8f8"
     ],
     [
-      "88225b51",
-      "112b0aeb"
+      "a99160eb",
+      "30983151"
     ],
     [
-      "45fc2fb9",
-      "dcf57e03"
+      "eed8a8f8",
+      "77d1f942"
     ],
     [
-      "7edba04a",
-      "e7d2f1f0"
+      "b96ef7c4",
+      "2067a67e"
+    ],
+    [
+      "eef4f298",
+      "77fda322"
+    ],
+    [
+      "97acce22",
+      "0ea59f98"
+    ],
+    [
+      "5b0d43ff",
+      "c2041245"
+    ],
+    [
+      "c515aa56",
+      "5c1cfbec"
     ]
   ],
   "deck_box": [
     {
-      "r_medium": "01660a0b",
-      "medium": "26aa6f64",
-      "o_large": "2a46e829",
-      "r_large": "6ff489b7",
-      "small": "8928178e",
-      "o_medium": "ad5aa50d",
-      "large": "cc964e02"
+      "small": "012c3383",
+      "medium": "3680b91a",
+      "o_medium": "979fcc81",
+      "large": "afdf690e",
+      "r_medium": "b6780e04",
+      "r_large": "c484cdd3",
+      "o_large": "e3c81c84"
     },
     {
-      "r_medium": "03212065",
-      "small": "093a7775",
-      "o_medium": "34aeb6ad",
-      "r_large": "6db3a3d9",
-      "large": "766c973e",
-      "medium": "9c50b658",
-      "o_large": "b3b2fb89"
+      "r_large": "01fa6340",
+      "o_large": "507db492",
+      "large": "b1946cc2",
+      "o_medium": "d6d131c6",
+      "medium": "d892be9d",
+      "small": "eaf6392c",
+      "r_medium": "f3db6667"
     },
     {
-      "r_medium": "07af74b9",
-      "medium": "32d40261",
-      "o_large": "5b2bda88",
-      "r_large": "693df705",
-      "small": "d26fb0c2",
-      "large": "d8e82307",
-      "o_medium": "dc3797ac"
+      "o_large": "0288195d",
+      "r_medium": "31ce4963",
+      "r_large": "4d777658",
+      "small": "6ac241c3",
+      "medium": "b98956bb",
+      "o_medium": "e70e94c2",
+      "large": "fc3e0d6a"
     },
     {
-      "r_medium": "0b7c98cc",
-      "medium": "2fb09600",
-      "r_large": "65ee1b70",
-      "o_large": "7de9fd66",
-      "small": "809e5ba5",
-      "large": "c58cb766",
-      "o_medium": "faf5b042"
+      "o_medium": "02baadf5",
+      "r_large": "040591b0",
+      "medium": "135ecfcb",
+      "small": "2921438c",
+      "r_medium": "d26240bc",
+      "o_large": "d38632fc",
+      "large": "ffc7f1eb"
     },
     {
-      "small": "10214634",
-      "o_medium": "23d5a2ee",
-      "medium": "24ecd13d",
-      "r_medium": "98846c0a",
-      "o_large": "a4c9efca",
-      "large": "ced0f05b",
-      "r_large": "f616efb6"
+      "r_medium": "040943ea",
+      "large": "1b02a1a3",
+      "r_large": "41d94f47",
+      "o_large": "dd7e4c95",
+      "small": "ee7c87b6",
+      "medium": "f4775932",
+      "o_medium": "f91639e5"
     },
     {
-      "o_medium": "109d9732",
-      "medium": "33166856",
-      "o_large": "9781da16",
-      "small": "a5688054",
-      "r_large": "a8b328c5",
-      "r_medium": "c621ab79",
-      "large": "d92a4930"
+      "large": "0549a46f",
+      "small": "05a68d19",
+      "medium": "1a655eb5",
+      "r_medium": "41aa2b89",
+      "o_large": "6ecbe483",
+      "r_large": "84a7e1d4",
+      "o_medium": "b858c4a2"
     },
     {
-      "r_large": "153f0175",
-      "large": "39e2886c",
-      "small": "3a3aee44",
-      "o_large": "655145ab",
-      "r_medium": "7bad82c9",
-      "medium": "d3dea90a",
-      "o_medium": "e24d088f"
+      "o_large": "06089ee2",
+      "r_large": "1a0f42dd",
+      "small": "95bca6eb",
+      "large": "9c6ce070",
+      "medium": "ab6430b6",
+      "o_medium": "d81dcb8c",
+      "r_medium": "f257e9d3"
     },
     {
-      "small": "174c822d",
-      "o_large": "2083e130",
-      "medium": "23e579e1",
-      "r_medium": "285d1f88",
-      "r_large": "46cf9c34",
-      "o_medium": "a79fac14",
-      "large": "c9d95887"
+      "r_large": "070e0ca2",
+      "small": "194dcd1b",
+      "o_medium": "6b5f9406",
+      "r_medium": "bb041611",
+      "medium": "cd2ad1df",
+      "o_large": "e8e76540",
+      "large": "ed508a40"
     },
     {
-      "o_large": "190eddf5",
-      "medium": "3150d60f",
-      "r_large": "31514ec4",
-      "small": "3c61d1ee",
-      "r_medium": "5fc3cd78",
-      "o_medium": "9e1290d1",
-      "large": "db6cf769"
+      "medium": "084cb217",
+      "r_medium": "57419707",
+      "o_medium": "617efb68",
+      "r_large": "a1e9489c",
+      "small": "c3109185",
+      "o_large": "c85949b5",
+      "large": "da2f0059"
     },
     {
-      "r_large": "1ea325f5",
-      "medium": "2061ad8f",
-      "o_large": "62a6e64d",
-      "r_medium": "7031a649",
-      "large": "ca5d8ce9",
-      "o_medium": "e5baab69",
-      "small": "f942e301"
+      "o_large": "09a76099",
+      "o_medium": "1bcecc45",
+      "r_medium": "3cb25176",
+      "medium": "42233e7e",
+      "small": "72a3bf5b",
+      "r_large": "8efdb729",
+      "large": "beb1ee24"
     },
     {
-      "o_medium": "2124a49f",
-      "r_large": "3fc588df",
-      "r_medium": "51570b63",
-      "large": "7cf2ba34",
-      "medium": "96ce9b52",
-      "o_large": "a638e9bb",
-      "small": "ee825a72"
+      "large": "0a6c2689",
+      "r_large": "0ba035bd",
+      "o_large": "37113088",
+      "o_medium": "75473921",
+      "medium": "80d4de56",
+      "r_medium": "8ec31c98",
+      "small": "9df30b6e"
     },
     {
-      "medium": "21a3c7b8",
-      "o_medium": "2910abf7",
-      "small": "8e45d397",
-      "o_large": "ae0ce6d3",
-      "r_medium": "b1bf7989",
-      "large": "cb9fe6de",
-      "r_large": "df2dfa35"
+      "o_large": "0d27e726",
+      "o_medium": "24dd930b",
+      "medium": "50ce5873",
+      "small": "8ddd5873",
+      "r_large": "d98583ac",
+      "large": "dee3033e",
+      "r_medium": "ff2bf1c6"
     },
     {
-      "medium": "222713d6",
-      "small": "604bb2bb",
-      "o_medium": "6b35ac8a",
-      "r_large": "874143f4",
-      "large": "c81b32b0",
-      "r_medium": "e9d3c048",
-      "o_large": "ec29e1ae"
+      "small": "0de9209c",
+      "o_medium": "1502360f",
+      "medium": "31d5b055",
+      "r_medium": "3d3edec2",
+      "o_large": "5fd24ae9",
+      "large": "93496296",
+      "r_large": "950896b4"
     },
     {
-      "r_medium": "23c13b08",
-      "o_large": "277442d6",
-      "large": "3a665c02",
-      "r_large": "4d53b8b4",
-      "o_medium": "a0680ff2",
-      "medium": "d05a7d64",
-      "small": "d4348f68"
+      "small": "0e47a777",
+      "large": "10197378",
+      "r_large": "3833f428",
+      "medium": "3f1fbaf9",
+      "o_large": "5c81e695",
+      "r_medium": "6beff0fc",
+      "o_medium": "cdd39ae4"
     },
     {
-      "o_medium": "24220108",
-      "large": "3d6ff4de",
-      "r_medium": "9318488a",
-      "o_large": "a33e4c2c",
-      "small": "d3594b71",
-      "medium": "d753d5b8",
-      "r_large": "fd8acb36"
+      "r_medium": "12e2ff64",
+      "o_medium": "2030062f",
+      "small": "28ca9b2a",
+      "r_large": "6497e60f",
+      "o_large": "7bece1a3",
+      "large": "c4640595",
+      "medium": "e65eb590"
     },
     {
-      "small": "244c1b1c",
-      "r_large": "3e433e98",
-      "r_medium": "50d1bd24",
-      "medium": "6c6b66b3",
-      "o_medium": "717c1236",
-      "large": "865747d5",
-      "o_large": "f6605f12"
+      "large": "14272345",
+      "o_medium": "3409c466",
+      "medium": "6ec6d9d1",
+      "small": "762901c1",
+      "o_large": "84a4989e",
+      "r_medium": "cb6074fb",
+      "r_large": "cede9b2e"
     },
     {
-      "medium": "27680553",
-      "o_medium": "61f0a593",
-      "r_large": "ae7a5677",
-      "r_medium": "c0e8d5cb",
-      "large": "cd542435",
-      "o_large": "e6ece8b7",
-      "small": "fe2f2718"
+      "r_large": "142c968f",
+      "large": "6610e6ae",
+      "r_medium": "697a6020",
+      "small": "8f98073e",
+      "o_large": "a61e9805",
+      "medium": "ab042884",
+      "o_medium": "de86943a"
     },
     {
-      "medium": "2e72fc37",
-      "o_medium": "365fb0dc",
-      "r_large": "a460c4b0",
-      "o_large": "b143fdf8",
-      "large": "c44edd51",
-      "r_medium": "caf2470c",
-      "small": "f7996b33"
+      "small": "1588de04",
+      "r_medium": "3042c6d7",
+      "o_large": "54fd332d",
+      "r_large": "568257c5",
+      "medium": "ca7fd890",
+      "large": "d1c681d8",
+      "o_medium": "e9c26e88"
     },
     {
-      "o_medium": "2ee70811",
-      "large": "3820e25b",
-      "small": "4d3dded2",
-      "o_large": "a9fb4535",
-      "r_medium": "ba235d09",
-      "medium": "d21cc33d",
-      "r_large": "d4b1deb5"
+      "o_large": "15ab3013",
+      "r_medium": "2cd90843",
+      "medium": "45162f03",
+      "small": "64420d91",
+      "large": "785be362",
+      "o_medium": "9fc8697d",
+      "r_large": "d152381c"
     },
     {
-      "r_medium": "2ef7b291",
-      "r_large": "4065312d",
-      "medium": "5005cd21",
-      "o_medium": "716a6797",
-      "small": "b6ebd409",
-      "large": "ba39ec47",
-      "o_large": "f6762ab3"
+      "o_large": "16f89c6f",
+      "o_medium": "4719c596",
+      "medium": "4bdc25af",
+      "small": "67ec8a7a",
+      "r_medium": "7a08267d",
+      "r_large": "7c695a80",
+      "large": "fb0bf28c"
     },
     {
-      "small": "2fe285b3",
-      "medium": "52437378",
-      "o_large": "78f92d50",
-      "r_medium": "b715d490",
-      "large": "b87f521e",
-      "r_large": "d987572c",
-      "o_medium": "ffe56074"
+      "small": "1b089256",
+      "r_medium": "2d5587f7",
+      "medium": "36e0a128",
+      "o_large": "43de1a63",
+      "large": "55a36fd0",
+      "o_medium": "91049337",
+      "r_large": "caa71981"
     },
     {
-      "o_large": "30192334",
-      "medium": "5488b193",
-      "small": "5f88713c",
-      "r_large": "a8d0fb6e",
-      "o_medium": "b7056e10",
-      "large": "beb490f5",
-      "r_medium": "c64278d2"
+      "r_large": "1cfb2d3f",
+      "o_medium": "65936e4c",
+      "small": "660752dc",
+      "r_medium": "ba8899a5",
+      "o_large": "be924f30",
+      "medium": "bedc5ff4",
+      "large": "c0a806f2"
     },
     {
-      "medium": "3092bc38",
-      "small": "4b66e178",
-      "o_medium": "52b8904f",
-      "r_medium": "9e4d12b8",
-      "o_large": "d5a4dd6b",
-      "large": "daae9d5e",
-      "r_large": "f0df9104"
+      "r_medium": "1d0b77ad",
+      "medium": "89ef4f28",
+      "o_large": "8a5ce6f7",
+      "r_large": "8b0245d9",
+      "small": "b174c5fb",
+      "o_medium": "cfa55076",
+      "large": "f0e2730d"
     },
     {
-      "r_large": "31329d6f",
-      "o_medium": "398a69f3",
-      "medium": "56ce0fca",
-      "r_medium": "5fa01ed3",
-      "large": "bcf22eac",
-      "o_large": "be9624d7",
-      "small": "c6812086"
+      "o_medium": "1d5593f3",
+      "medium": "4243264c",
+      "large": "44cde8fa",
+      "small": "68871e8e",
+      "r_large": "80de637b",
+      "r_medium": "a79fd885",
+      "o_large": "a9b1667e"
     },
     {
-      "large": "313a1b3f",
-      "small": "448b92f9",
-      "o_medium": "79481d5e",
-      "r_medium": "b039cfce",
-      "medium": "db063a59",
-      "r_large": "deab4c72",
-      "o_large": "fe54507a"
+      "o_large": "1dd7e5ab",
+      "r_medium": "77743e68",
+      "small": "7f8d74e2",
+      "medium": "b0764d6a",
+      "large": "b98411c2",
+      "o_medium": "bbd99d11",
+      "r_large": "bfe39bf1"
     },
     {
-      "o_large": "3adc2a2d",
-      "medium": "51c7a716",
-      "r_large": "81ebeeed",
-      "large": "bbfb8670",
-      "o_medium": "bdc06709",
-      "small": "c1ece49f",
-      "r_medium": "ef796d51"
+      "r_medium": "1e1268c5",
+      "o_large": "26b6b217",
+      "small": "4fe1fa75",
+      "medium": "6e02537e",
+      "large": "ab136a69",
+      "r_large": "bce806e3",
+      "o_medium": "d23ca4e2"
     },
     {
-      "r_large": "3c0414f6",
-      "large": "3cad9ee9",
-      "r_medium": "5296974a",
-      "o_large": "6f944cb2",
-      "small": "a45e7be7",
-      "medium": "d691bf8f",
-      "o_medium": "e8880196"
+      "o_medium": "1f235961",
+      "r_large": "33efd28a",
+      "o_large": "7f6c661c",
+      "large": "a436e88f",
+      "r_medium": "d17b5fd4",
+      "small": "d7b47c02",
+      "medium": "f4b3d39d"
     },
     {
-      "o_large": "3d3dfc6a",
-      "large": "742a2967",
-      "small": "903326cf",
-      "r_medium": "9ac34664",
-      "medium": "9e160801",
-      "o_medium": "ba21b14e",
-      "r_large": "f451c5d8"
+      "o_large": "223635a8",
+      "medium": "7cef3573",
+      "small": "b09f1d5d",
+      "large": "cb418773",
+      "r_medium": "dd8bc875",
+      "r_large": "eb903266",
+      "o_medium": "ed2ffbac"
     },
     {
-      "small": "3d572a5d",
-      "large": "3eeb20b0",
-      "o_medium": "66070675",
-      "r_large": "a5e672f7",
-      "r_medium": "cb74f14b",
-      "medium": "d4d701d6",
-      "o_large": "e11b4b51"
+      "medium": "2338d658",
+      "o_medium": "2a116941",
+      "o_large": "5b52cd56",
+      "r_large": "c270a231",
+      "small": "f297c7b4",
+      "large": "f31b8f8c",
+      "r_medium": "fea77e72"
     },
     {
-      "small": "563e3d17",
-      "medium": "5d9248f7",
-      "o_large": "67b6367b",
-      "r_large": "a2ca69a9",
-      "large": "b7ae6991",
-      "r_medium": "cc58ea15",
-      "o_medium": "e0aa7b5f"
+      "medium": "246ddf17",
+      "r_medium": "75e1aeb4",
+      "r_large": "93fcf956",
+      "o_medium": "a88c93cf",
+      "large": "cf8d8414",
+      "o_large": "e7489b3b",
+      "small": "fe52d4ab"
     },
     {
-      "o_large": "6a92e925",
-      "large": "7d30d003",
-      "r_medium": "90d9d4a3",
-      "medium": "970cf165",
-      "small": "99856ae4",
-      "o_medium": "ed8ea401",
-      "r_large": "fe4b571f"
+      "medium": "2ac7cd89",
+      "r_large": "30e44f98",
+      "o_large": "440d31a0",
+      "o_medium": "76c66092",
+      "large": "b6a19324",
+      "r_medium": "b81d0979",
+      "small": "e7d8f295"
     },
     {
-      "large": "77aefd09",
-      "small": "7e3d47e3",
-      "o_large": "7f18fb17",
-      "medium": "9d92dc6f",
-      "r_large": "ac3d7c19",
-      "r_medium": "c2afffa5",
-      "o_medium": "f804b633"
+      "r_large": "4b8319ba",
+      "o_medium": "5a803102",
+      "r_medium": "79113915",
+      "small": "9979b5f4",
+      "large": "a0faebe8",
+      "medium": "ac3139f9",
+      "o_large": "ba12c88f"
+    },
+    {
+      "o_large": "4c71e418",
+      "o_medium": "52d794fe",
+      "r_large": "5e55ec75",
+      "large": "777e6184",
+      "medium": "dfa7afe0",
+      "r_medium": "e3b03f52",
+      "small": "fc178be6"
+    },
+    {
+      "r_large": "50763827",
+      "o_medium": "544ccb48",
+      "r_medium": "789db6a1",
+      "large": "8d02675a",
+      "medium": "dfc7b7d2",
+      "small": "e6332a33",
+      "o_large": "ec67e2ff"
+    },
+    {
+      "r_medium": "5bb100a6",
+      "r_large": "7996a870",
+      "medium": "801054f9",
+      "o_medium": "937259a5",
+      "o_large": "95031a01",
+      "small": "a43bf0da",
+      "large": "b5586fa5"
     }
   ],
   "adress": [
     "11115fe9",
     "6e12f1f2",
+    "2a20bf2c",
+    "35dea6eb",
     "95af5a11",
     "0e3da5a4",
     "2433c9c4",
@@ -717,22 +766,22 @@
     "f5800e47"
   ],
   "types": {
-    "Normal": "1127",
-    "Effect": "899",
-    "Ritual": "1221",
-    "Fusion": "1211",
-    "Spell": "1002",
-    "Trap": "1134",
-    "Token": "798",
-    "Synchro": "857",
-    "Xyz": "995",
-    "Normal Pendulum": "937",
-    "Effect Pendulum": "802",
-    "Xyz Pendulum": "904",
-    "Synchro Pendulum": "1295",
-    "Fusion Pendulum": "1149",
-    "Ritual Pendulum": "1158",
-    "Link": "1133"
+    "Normal": "1128",
+    "Effect": "900",
+    "Ritual": "1222",
+    "Fusion": "1212",
+    "Spell": "1003",
+    "Trap": "1135",
+    "Token": "799",
+    "Synchro": "858",
+    "Xyz": "996",
+    "Normal Pendulum": "938",
+    "Effect Pendulum": "803",
+    "Xyz Pendulum": "905",
+    "Synchro Pendulum": "1296",
+    "Fusion Pendulum": "1150",
+    "Ritual Pendulum": "1159",
+    "Link": "1134"
   },
   "gamePath": "empty",
   "lastImage": "empty",
@@ -752,6 +801,36 @@
     "0b2c8765"
   ],
   "icons": {
+    "1010056": [
+      "20569d1b",
+      "22b5918f",
+      "26e03389"
+    ],
+    "1010057": [
+      "2194f72c",
+      "272259be",
+      "55b2a119"
+    ],
+    "1010050": [
+      "226d4f3b",
+      "24dbe1a9",
+      "cbd634ba"
+    ],
+    "1010051": [
+      "23af250c",
+      "25198b9e",
+      "bcd1042c"
+    ],
+    "1010065": [
+      "30a58cac",
+      "3613223e",
+      "909193f6"
+    ],
+    "1010064": [
+      "3167e69b",
+      "37d14809",
+      "e796a360"
+    ],
     "1010053": [
       "202bf162",
       "269d5ff0",
@@ -13747,6 +13826,62 @@
     "Brightest, Blazing, Branded King": "d95d3390",
     "A Shattered, Colorless Realm": "de30f789",
     "Double Hooking": "e11b95c1",
-    "New Frontier": "ec06950b"
+    "New Frontier": "ec06950b",
+    "RGB Rainbowlution": "0388c286",
+    "New World Stars": "100ddecd",
+    "Gold Pride - Star Leon": "191727a9",
+    "Beta Evolution Pill - Ultranscendance": "1ed656ff",
+    "Gunkan Suship Catch-of-the-Day": "2093ebcf",
+    "Gold Pride - Better Luck Next Time!": "2113dd6e",
+    "Superheavy Samurai Monk Big Benkei": "25facd19",
+    "Gold Pride - Pin Baller": "267e1977",
+    "Ground Xeno": "2aa1738a",
+    "Dreaming Nemleria": "2b21452b",
+    "Transcendosaurus Meteorus": "2dccb793",
+    "Pendulum Pendant": "31bea004",
+    "Superheavy Samurai Soulgaia Booster": "323a746a",
+    "Nemleria Louve": "35fb053c",
+    "Dinomorphia Intact": "3988da8e",
+    "Gold Pride - The Crowd Goes Wild!": "3ce1fc58",
+    "Superheavy Samurai Prodigy Wakaushi": "453d44fc",
+    "Gold Pride - Roller Baller": "46b99092",
+    "Gold Pride - Start Your Engines!": "4be6ccce",
+    "Gold Pride - Chariot Carrie": "517929e1",
+    "Gold Pride - It's Neck and Neck!": "5614edf8",
+    "Xeno Meteorus": "5acb8705",
+    "Nemleria Dream Defender - Oreiller": "5c2675bd",
+    "Transcendosaurus Drillygnathus": "5da6431c",
+    "Gold Pride - Leon": "67a65b14",
+    "Gold Pride - Nytro Blaster": "6e10173f",
+    "Realm Resonance": "70ca5728",
+    "New World Formation": "80b2c35c",
+    "Superheavy Samurai Brave Masurawo": "857750c5",
+    "Gold Pride - Captain Carrie": "89a83a38",
+    "Superheavy Samurai Security": "8a2cee56",
+    "Dreaming Reality of Nemleria, Realized": "8dafc396",
+    "Hatsugai": "961ca557",
+    "Nemleria Dream Defender - Couette": "a262d1d6",
+    "Superheavy Samurai Stealthy": "a28569fb",
+    "Supersoaring": "b3a82230",
+    "Transcendosaurus Gigantozowler": "b4c5e629",
+    "Nemleria Repeter": "b64dc9ec",
+    "Dream Tower of Princess Nemleria": "b7413247",
+    "Visas Amritara": "b8f4650d",
+    "Gold Pride - Pedal to the Metal!": "bf7748cd",
+    "Sweet Dreams, Nemleria": "c04602d1",
+    "Veda Kalanta": "c0e3e66a",
+    "Transcendosaurus Glaciasaurus": "c3c2d6bf",
+    "Gold Pride - That Came Out of Nowhere!": "c870785b",
+    "Superheavy Samurai Motorbike": "d582596d",
+    "Mannadium Trisukta": "e251d033",
+    "Zuttomozaurus": "e393ba04",
+    "New World - Amritara": "e9c30692",
+    "Superheavy Samurai Commander Shanawo": "f2706053",
+    "Storagepod": "f3d97f43",
+    "Transcendosaurus Exaraptor": "f576d16d",
+    "Nemleria Dream Devourer - Reveil": "faa8f300",
+    "Gold Pride - Nytro Head": "feaf0aae",
+    "Magicians of Bonds and Unity": "3b208d0e",
+    "How Did Dai Get Here?": "b7579c21"
   }
 }
