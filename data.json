@@ -668,6 +668,11 @@
     }
   ],
   "adress": [
+    "19d4f76c",
+    "4cd93517",
+    "d14ff745",
+    "d7992928",
+    "fb9378af",
     "11115fe9",
     "6e12f1f2",
     "2a20bf2c",
@@ -801,6 +806,31 @@
     "0b2c8765"
   ],
   "icons": {
+    "1012041": [
+      "0fc3fde6",
+      "d06d4df0",
+      "d6dbe362"
+    ],
+    "1012055": [
+      "11b508be",
+      "696e2cdb",
+      "6fd88249"
+    ],
+    "1010058": [
+      "2ac8b011",
+      "2c7e1e83",
+      "c50dbc88"
+    ],
+    "1010059": [
+      "2b0ada26",
+      "2dbc74b4",
+      "b20a8c1e"
+    ],
+    "1010060": [
+      "30d8e0d5",
+      "366e4e47",
+      "e0fb6779"
+    ],
     "1010056": [
       "20569d1b",
       "22b5918f",
@@ -13882,6 +13912,49 @@
     "Nemleria Dream Devourer - Reveil": "faa8f300",
     "Gold Pride - Nytro Head": "feaf0aae",
     "Magicians of Bonds and Unity": "3b208d0e",
-    "How Did Dai Get Here?": "b7579c21"
+    "How Did Dai Get Here?": "b7579c21",
+    "Noble Arms Museum": "00a0a3a7",
+    "T.G. Over Dragonar": "05e9fd34",
+    "Divine Temple of the Snake-Eye": "0bd5cd2b",
+    "Infernoble Knight Turpin": "14a6922c",
+    "Snake-Eyes Poplar": "1a390e9e",
+    "T.G. Close": "219f1064",
+    "Crimson Dragon": "21fd34b7",
+    "Sinful Spoils of Betrayal - Silvera": "26f2d47d",
+    "Emperor Charles the Great": "38e605f6",
+    "Synchro World": "4657794b",
+    "Snake-Eyes Flamberge Dragon": "47b56b39",
+    "Angelica's Angelic Ring": "48eed5aa",
+    "Startling Stare of the Snake-Eyes": "51f5e4eb",
+    "Courageous Crimson Chevalier Bradamante": "52dbcddc",
+    "Dramatic Snake-Eye Chase": "54baf26e",
+    "Cosmic Quasar Dragon": "56fa0421",
+    "Infernoble Knight Ricciardetto": "63a1a2ba",
+    "The Continuing Epic of Charles": "670aee5b",
+    "Scrap-Iron Sacred Statue": "6ebca270",
+    "T.G. Limiter Removal": "7209758f",
+    "T.G. Mighty Striker": "72eecda2",
+    "Original Sinful Spoils - Snake-Eye": "7cd2fdbd",
+    "Duelist Genesis": "7e11df1a",
+    "T.G. Glaive Blaster": "9556e0a5",
+    "Sinful Spoils of Subversion - Snake-Eye": "99a9f21d",
+    "Sinful Spoils of Doom - Rciela": "9b6ad0ba",
+    "\"Infernoble Arms - Almace\"": "9ec43604",
+    "Elemental HERO Flame Wingman - Infernal Rage": "a66c798c",
+    "Snake-Eye Oak": "a9bb0a15",
+    "You're Finished": "ab9f909f",
+    "Wheel Synchron": "aeffe7bd",
+    "Camelot, Realm of Noble Knights and Noble Arms": "b0a03b54",
+    "Diabellstar the Black Witch": "be7bb366",
+    "T.G. Rocket Salamander": "c0cacfdb",
+    "Snake-Eye Ash": "c97c83f0",
+    "Angelica, Princess of Noble Arms": "cff3559b",
+    "Synchro Overtop": "d6e864da",
+    "Revolution Synchron": "d9f8d72b",
+    "Split Mirror of the Underworld": "dc98a009",
+    "Snake-Eye Birch": "debc3a83",
+    "Combat Wheel": "e9e37ed7",
+    "T.G. All Clear": "eb002435",
+    "WANTED: Seeker of Sinful Spoils": "ec6de02c"
   }
 }
