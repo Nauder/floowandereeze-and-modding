@@ -5,6 +5,7 @@ from shutil import copyfile
 from UnityPy import load as unity_load
 
 from PIL import Image, ImageTk
+from UnityPy.enums import TextureFormat
 
 from util.constants import DATA, FILE, FIELD_FLIP_INDEX
 from util.image_utils import slugify
@@ -40,14 +41,31 @@ def replace_unity3d_asset(asset: str, img: Image.Image, by_path_id=False) -> Non
     env = unity_load(
         join(DATA["gamePath"][:-18], "masterduel_Data", FILE["UNITY"])
     )
+
+    if asset == 'ShopBGBase02':
+        for obj in env.objects:
+            if obj.type.name == "Sprite":
+                data = obj.read()
+                if asset == data.name:
+                    data.m_Rect.width, data.m_Rect.height = img.size
+                    data.m_RD.textureRect.width, data.m_RD.textureRect.height = img.size
+                    data.save()
+                    break
+
     for obj in env.objects:
         if obj.type.name == "Texture2D":
             data = obj.read()
             if by_path_id and str(obj.path_id) == asset or asset == data.name:
                 data.m_Width, data.m_Height = img.size
-                data.image = img
+
+                data.set_image(
+                    img=img,
+                    target_format=TextureFormat.RGBA32
+                )
+
                 data.save()
                 break
+
     with open(
             join(DATA["gamePath"][:-18], "masterduel_Data", "data.unity3d"), "wb"
     ) as f:

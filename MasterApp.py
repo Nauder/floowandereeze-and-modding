@@ -14,7 +14,7 @@ from math import gcd
 from services.UnityService import UnityService
 from util.constants import PROJECT_PATH, PROJECT_UI, DATA, BUTTON, FILE, MESSAGE
 from util.data_utils import update_json
-from util.image_utils import convert_image
+from util.image_utils import convert_image, resize_image
 from util.ui_utils import show_message, show_error
 from util.unity_utils import replace_unity3d_asset, fetch_sleeve_thumb_list, fetch_unity3d_image, swap_bundles, \
     fetch_swap_list, fetch_icon_thumb_list, fetch_home_bg, fetch_field_thumb_list, extract_unity3d_image, \
@@ -345,7 +345,7 @@ class MasterApp:
             update_json()
             replace_unity3d_asset(
                 "ShopBGBase02",
-                convert_image(self.home_path.cget("path"), (1920, 1080)),
+                resize_image(self.home_path.cget("path"), (1920, 1080)),
             )
             self.fetch_thumbnails()
             show_message(

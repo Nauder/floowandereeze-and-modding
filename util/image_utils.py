@@ -40,7 +40,32 @@ def slugify(value, allow_unicode=False) -> str:
     return sub(r"[-\s]+", "-", value).strip("-_")
 
 
-def convert_image(path: str, size: tuple) -> Image.Image:
+def resize_image(path: str, size: tuple[int, int]) -> Image.Image:
     """Converts the user given image to its proper size using lanczos resampling"""
 
     return Image.open(path).convert("RGBA").resize(size, Image.Resampling.LANCZOS)
+
+
+def convert_image(path: str, size: tuple) -> Image.Image:
+    """Converts the user given image to its proper size using lanczos resampling"""
+
+    return change_image_ratio(Image.open(path).convert("RGBA"), size)
+
+
+def change_image_ratio(img: Image, new_ratio: tuple):
+    width, height = img.size
+    original_ratio = width / height
+    new_ratio_value = new_ratio[0] / new_ratio[1]
+
+    if original_ratio > new_ratio_value:
+        # If the original ratio is greater than target ratio, then reduce width
+        new_width = int(height * new_ratio_value)
+        left_margin = (width - new_width) / 2
+        img = img.crop((left_margin, 0, width - left_margin, height))
+    elif original_ratio < new_ratio_value:
+        # If the original ratio is less than target ratio, then reduce height
+        new_height = int(width / new_ratio_value)
+        top_margin = (height - new_height) / 2
+        img = img.crop((0, top_margin, width, height - top_margin))
+
+    return img

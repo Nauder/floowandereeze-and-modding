@@ -1,9 +1,10 @@
 from os.path import join
 
 import PIL.ImageOps
-from PIL import Image, ImageTk
+from PIL import Image
+from UnityPy.enums import TextureFormat
 
-from util.constants import DATA, FILE, FIELD_FLIP_INDEX, PROJECT_PATH
+from util.constants import DATA, FIELD_FLIP_INDEX, PROJECT_PATH
 from util.image_utils import convert_image, add_sleeve_border, slugify
 from util.unity_utils import prepare_environment
 from UnityPy import load as unity_load
@@ -121,10 +122,10 @@ class UnityService:
                 if asset == "slv":
                     img = (
                         add_sleeve_border(
-                            convert_image(DATA["lastImage"], (480, 700))
+                            convert_image(DATA["lastImage"], (24, 35))
                         )
                         if "selected" in filtered
-                        else convert_image(DATA["lastImage"], (480, 700))
+                        else convert_image(DATA["lastImage"], (24, 35))
                     )
                     found = True
                 elif asset == "crd":
@@ -187,7 +188,15 @@ class UnityService:
 
                 if found:
                     data.m_Width, data.m_Height = img.size
-                    data.image = img
+
+                    data.set_image(
+                        img=img,
+                        target_format=TextureFormat.RGBA32,
+                        mipmap_count=10
+                    )
+
+                    #
+                    # data.image = img
 
                     data.save()
                     break
@@ -210,7 +219,7 @@ class UnityService:
             return
 
         with open(f_path, "wb") as f:
-            f.write(env.file.save())
+            f.write(env.file.save(packer='lz4'))
 
     def extract_texture(self, bundle: str, name: str, miss=False) -> None:
         """

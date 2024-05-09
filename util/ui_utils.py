@@ -1,10 +1,6 @@
 import tkinter as tk
-from os.path import join
 from tkinter import ttk
-
-from PIL import ImageTk
-
-from util.constants import FILE, DATA
+from PIL import Image, ImageDraw
 
 # STATIC FUNCTIONS #
 
