@@ -31,7 +31,7 @@ function checkRequirements
     foreach ($filePath in $ProjectFiles)
     {
         # check if file exists
-        if (-Not(Test-Path $filePath))
+        if (-Not (Test-Path $filePath))
         {
             # print missing file
             Write-Error "Missing: $filePath"
@@ -42,13 +42,13 @@ function checkRequirements
     foreach ($package in $Packages)
     {
         # split package name and version if exists
-        $package_name, $package_version = $package -split '=='
+        $package_name, $package_version = $package -split '>='
 
         # Check using installed packages
         $pip_packages = pip show $package_name | Out-String
 
         # If not installed add to not_installed list
-        if (-Not($?))
+        if (-Not ($?))
         {
             $not_installed += "$package"
             continue
