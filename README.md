@@ -6,7 +6,7 @@
 
 This is a pure Python tool that is able to replace card sleeves, deluxe sleeves, card arts, icons, home arts and
 most fields in the Yu-Gi-Oh! Master Duel game with a user-given image, making the process of creating custom
-assets trivial. It's also able to swap mates and field assets. 
+assets trivial. It's also able to swap mates and field assets.
 
 - [Downloading](#Downloading)
 - [Usage](#Usage)
@@ -17,12 +17,15 @@ assets trivial. It's also able to swap mates and field assets.
     - [Installing Dependencies](#Installing-Dependencies)
     - [Running the App](#Running-the-App)
     - [Creating an Executable](#Creating-an-Executable)
- 
+
 ## Downloading
 
-Download the latest version of the app, and Assets Update if available, from the [releases](https://github.com/Nauder/floowandereeze-and-modding/releases) tab. 
-The Assets Update content should go into the "_internal" folder.
+Download the latest version of the app from
+the [releases](https://github.com/Nauder/floowandereeze-and-modding/releases) tab.
 Releases prior to v2.1.0 are available on [Nexus Mods](https://www.nexusmods.com/yugiohmasterduel/mods/372).
+
+Download the [data.json](https://raw.githubusercontent.com/Nauder/floowandereeze-and-modding/main/data.json) file and
+replace the one found in the "_internal" folder.
 
 ## Usage
 
