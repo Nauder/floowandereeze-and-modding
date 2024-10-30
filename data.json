@@ -668,6 +668,16 @@
     }
   ],
   "adress": [
+    "0418c900",
+    "2b23f9f8",
+    "350c4561",
+    "64379d56",
+    "9f8a36b5",
+    "a46935fa",
+    "b22aa842",
+    "c44661ac",
+    "d0c31adc",
+    "ffa562e3",
     "5fd49e19",
     "60d36490",
     "851c3b2d",
@@ -837,6 +847,101 @@
     "0b2c8765"
   ],
   "icons": {
+    "1010085": [
+      "0e12be78",
+      "d07afb9f",
+      "d6cc550d"
+    ],
+    "1010076": [
+      "1083f30d",
+      "8a5f5590",
+      "8ce9fb02"
+    ],
+    "1011041": [
+      "1d765208",
+      "504f91cc",
+      "56f93f5e"
+    ],
+    "1011038": [
+      "2beb7c6b",
+      "c24992fa",
+      "c4ff3c68"
+    ],
+    "1012065": [
+      "3a985b7d",
+      "7bdb8335",
+      "7d6d2da7"
+    ],
+    "1012060": [
+      "4af2aff2",
+      "7ba6ef4c",
+      "7d1041de"
+    ],
+    "1012064": [
+      "4d9f6beb",
+      "7a19e902",
+      "7caf4790"
+    ],
+    "1011040": [
+      "518dfbfb",
+      "573b5569",
+      "6a71629e"
+    ],
+    "1011035": [
+      "555a00d6",
+      "ca9101a9",
+      "cc27af3b"
+    ],
+    "1011039": [
+      "5cec4cfd",
+      "c38bf8cd",
+      "c53d565f"
+    ],
+    "1010077": [
+      "6784c39b",
+      "8b9d3fa7",
+      "8d2b9135"
+    ],
+    "1012057": [
+      "6aeaf8b5",
+      "6c5c5627",
+      "ffbb6992"
+    ],
+    "1010079": [
+      "803cee9c",
+      "810312ad",
+      "87b5bc3f"
+    ],
+    "1010078": [
+      "80c1789a",
+      "8677d608",
+      "f73bde0a"
+    ],
+    "1010075": [
+      "8819ebc9",
+      "898aa2b7",
+      "8eaf455b"
+    ],
+    "1010074": [
+      "89db81fe",
+      "8f6d2f6c",
+      "fe8d9221"
+    ],
+    "1010082": [
+      "90762bdb",
+      "d3834388",
+      "d535ed1a"
+    ],
+    "1011037": [
+      "bb5461fa",
+      "c915d5c7",
+      "cfa37b55"
+    ],
+    "1011036": [
+      "c8d7bff0",
+      "cc53516c",
+      "ce611162"
+    ],
     "1010081": [
       "097f7a61",
       "d1c5fdd1",
@@ -13989,7 +14094,6 @@
     "S-Force Nightchaser": "eb6b5112",
     "Poissonniere de Nouvelles": "f5916940",
     "Chronicle Sorceress": "162d7230",
-    "Ritual Beast Ulti-Reirautari": "25d3d8e0",
     "Dark Beast Token": "25dcfd4a",
     "Yubel - Das Ewig Liebe Wachter": "3ba52db8",
     "Legendary Fire King Ponix": "d56af8a2",
@@ -14004,8 +14108,6 @@
     "Garunix Eternity, Hyang of the Fire Kings": "4b0e6d01",
     "I:P Masquerena (alt)": "aa1f6d22",
     "Arms of Genex - Return Zero": "ab1a3029",
-    "Spiritual Beast Tamer Lara": "bcda895a",
-    "Infernoid Flood": "cbddb9cc",
     "Sacred Fire King Garunix": "98ee04d4",
     "Horus the Black Flame Deity": "044ffbc6",
     "Lancea, Dragonic Ancestor of the Ice Spirit Mountain": "dc1d00bf",
@@ -14462,6 +14564,119 @@
     "White Sunfish": "f35aabab",
     "Mira Match": "f69f3832",
     "Spell Card \"Soul Exchange\"": "fccd54af",
-    "Bunch of Beast Bodies": "ff297419"
+    "Bunch of Beast Bodies": "ff297419",
+    "Junk Mail": "00c28774",
+    "Aromalilith Rosalina": "03223fdf",
+    "Jongleur-Ghoul Illusionist": "03c587f2",
+    "Aromalilith Magnolia": "04a843eb",
+    "Materialization": "0890913b",
+    "Escapegoat": "0ab243a7",
+    "R-Genex Turing": "0ad62f62",
+    "Ragnaraika Chain Coils": "0adf7e96",
+    "Vagnawa the Moon-Eating Dragon": "0d1e0fc0",
+    "Sangenpai Bident Dragion": "13c44fd7",
+    "Mokomoko": "14053e81",
+    "Ritual Beast Ulti-Nochiudrago": "14a0da3a",
+    "Minerva, the Athenian Lightsworn": "14a98bce",
+    "Aroma Healing": "16e66463",
+    "Carnot the Eternal Machine": "1adeb6b3",
+    "UFOLight": "1b9f086c",
+    "Ragnaraika Skeletal Soldier": "1d1fc7e5",
+    "Goblin Biker Dugg Charger": "1d54ca87",
+    "E Stranger Big Bang": "1db372aa",
+    "Moon of the Closed Heaven": "1ffc9d07",
+    "Ancient Gear Dark Golem": "21159578",
+    "Goblin Biker Grand Entrance": "23bdc2f8",
+    "Gen the Diamond Tiger": "25126cd6",
+    "Tenpai Dragon Genroku": "317df871",
+    "Magical Trick Mirror": "36e29e63",
+    "Tenpai Dragon Paidra": "380ea439",
+    "Goblin Biker Big Gabonga": "3dcb37a0",
+    "Ragnaraika Selene Snapper": "40708272",
+    "Burgundy the Magic Elf": "45b0edbd",
+    "Goblin's Crazy Beast": "4acc0736",
+    "Ragnaraika Armored Lizard": "4f0994af",
+    "Asset Mountis": "52155c40",
+    "Multi-Universe": "57f26797",
+    "Blaze, Supreme Ruler of all Dragons": "59a7f2a4",
+    "Ancient Gear Duel": "5acdcf13",
+    "Ragnaraika Hunting Dance": "5da00b0a",
+    "The Black Goat Laughs": "61e154f5",
+    "Ritual Beast Ulti-Reirautari": "63a7eaac",
+    "Goblin Biker Troika Griare": "63aebb58",
+    "Wightlord": "6424c76c",
+    "Sangenpai Transcendent Dragion": "64c37f41",
+    "Ragnaraika Mantis Monk": "6a18f773",
+    "Goblin Freefall Squad": "6ab4423c",
+    "Kuibelt the Blade Dragon": "6ad02ef9",
+    "Tarai": "6bf5fce3",
+    "Goblin Biker Mean Merciless": "6d3e3e08",
+    "Magmacho Dragon": "6dd98625",
+    "Dora Dora": "7246e0f0",
+    "Ragnaraika Bloom": "7303c632",
+    "Flametongue the Blazing Magical Blade": "732ca795",
+    "Aroma Blend": "78fa65b4",
+    "Cyclos the Circular Sprite": "7a523234",
+    "Arms of Genex Return Zero": "7abcdbed",
+    "Infernoid Evil": "7dd11ff4",
+    "Ragnaraika Stag Sovereign": "7dd84e00",
+    "Sangen Kaiho": "7f5be03a",
+    "Goblin Biker Clatter Sploder": "83305f24",
+    "Berserk Archfiend": "83d7e709",
+    "Sunset Beat": "8737a68a",
+    "Lightsworn Dragonling": "8a2aa640",
+    "Cursed Bride Doll": "8c4dd1e4",
+    "Spiritual Beast Tamer Lara": "8da98b80",
+    "Conbirdable": "90f71ff9",
+    "Mutamorphosis": "9199c081",
+    "Cooling Embers": "93319701",
+    "Starry Dragon's Cycle": "93bb121d",
+    "R-Genex Undine": "93df7ed8",
+    "Void Reignition": "9a6932f3",
+    "Disablaster the Negation Fortress": "9c4881dc",
+    "Life Shaver": "9dddad5b",
+    "Ragnaraika the Evil Seed": "a107f583",
+    "Ragnaraika Wicked Butterfly": "a1c2e5e0",
+    "Aromalilith Rosemary": "a3afa203",
+    "Tenpai Dragon Fadra": "a8b1b9a8",
+    "Sangen Kaimen": "add89f7e",
+    "Ancient Gear Dragon": "affed5ff",
+    "Attack Guidance Armor": "b0b8e89b",
+    "Ancient Gear Tanker": "b1aa88e9",
+    "Krishnerd Witch": "b9fc06bb",
+    "Goblin Biker Grand Bash": "bab49342",
+    "Ken the Warrior Dragon": "bc1b3d6c",
+    "Infernity Queen": "bd574a5a",
+    "Metaltronus": "c3c49ea9",
+    "Goblin Biker Grand Pileup": "c4a95ab0",
+    "Ancient Gear Commander": "c6adb87f",
+    "Haggard Lizardose": "c996f234",
+    "Cursed Fire King Doom Burst": "ca507acc",
+    "Rescue Hedgehog": "cb1c0dfa",
+    "Dandy Whitelion": "cc15a526",
+    "Pitknight Filly": "cc71c9e3",
+    "Lightsworn Aegis": "cd1f169b",
+    "Ragnaraika Samurai Beetle": "d600c515",
+    "Sangen Summoning": "dadfafe8",
+    "Sorcerer of Sebek": "dd1edebe",
+    "DPH Gendamoore": "de1417d1",
+    "Tenpai Dragon Chundra": "dfb6893e",
+    "Ancient Gear Advance": "e3bcdba3",
+    "Repair Genex Controller": "e4d84e4e",
+    "Paralyzing Mushroom": "eb4fb14a",
+    "Infernoid Flood": "ed6e0265",
+    "Enlightenment Dragon": "ed80ebbc",
+    "Swarm of Centipedes": "f030961c",
+    "I.A.S. -Invasive Alien Species-": "f2fcad59",
+    "Procession of the Tea Jar": "f3bd1386",
+    "Goblin Biker Boom Mach": "f4376fb2",
+    "Time Reloader": "f4d0d79f",
+    "Goblin Biker Grand Stampede": "f8e8054f",
+    "Gold Pride - Eliminator": "fa4052cf",
+    "Void Breach": "faaebb16",
+    "Weiss, Lightsworn Archfiend": "fd2d96d6",
+    "Ritual Beast Inheritance": "fdc37f0f",
+    "Gold Pride - Eradicator": "fdca2efb",
+    "Terrors of the Afterroot": "ff85c156"
   }
 }
