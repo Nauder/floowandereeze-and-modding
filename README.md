@@ -27,6 +27,13 @@ Releases prior to v2.1.0 are available on [Nexus Mods](https://www.nexusmods.com
 Download the [data.json](https://raw.githubusercontent.com/Nauder/floowandereeze-and-modding/main/data.json) file and
 replace the one found in the "_internal" folder.
 
+## Updating
+
+If there is a new [release](https://github.com/Nauder/floowandereeze-and-modding/releases) follow the same steps as a
+new download, if not only the
+[data.json](https://raw.githubusercontent.com/Nauder/floowandereeze-and-modding/main/data.json) file needs to be
+updated.
+
 ## Usage
 
 Refer to the [usage](./docs/USAGE.md) guide.
