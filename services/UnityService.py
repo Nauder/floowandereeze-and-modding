@@ -55,7 +55,7 @@ class UnityService:
                     img.thumbnail((760, 760), Image.Resampling.LANCZOS)
                     found = True
                 elif aspect == "fld":
-                    if "01_BaseColor_near" in data.name:
+                    if "01_BaseColor_near" in data.m_Name:
                         img = data.image
                         if self.field_to_replace < FIELD_FLIP_INDEX:
                             img_field = img.crop((0, 311, 2048, 1023)).rotate(180)
@@ -161,7 +161,7 @@ class UnityService:
                         new_img = Image.new("RGBA", wallpaper.size)
                     img = new_img
                     found = True
-                elif asset == "fld" and "01_BaseColor_near" in data.name:
+                elif asset == "fld" and "01_BaseColor_near" in data.m_Name:
                     img = data.image
                     if self.field_to_replace < FIELD_FLIP_INDEX:
                         mat = Image.open(DATA["lastField"]).rotate(180)
@@ -237,7 +237,7 @@ class UnityService:
                 data = obj.read()
 
                 if name == DATA["field"][self.field_to_replace]:
-                    if "01_BaseColor_near" in data.name:
+                    if "01_BaseColor_near" in data.m_Name:
                         found = True
                 else:
                     found = True

@@ -15,5 +15,5 @@ FILE = {
     "UNITY": "data.unity3d",
 }
 BUTTON = ["<Button-1>", "<Button-3>"]
-DATA = load(open(f'{PROJECT_PATH}/data.json', "r+"))
+DATA = load(open(f'{PROJECT_PATH}/data.json', "r+", encoding="cp949"))
 FIELD_FLIP_INDEX = 9

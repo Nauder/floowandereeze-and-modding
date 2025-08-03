@@ -36,6 +36,8 @@ def fetch_unity3d_image(path_id: str, aspect: tuple) -> Image.Image:
             img.name = "image.jpg"
             return img
 
+    return Image.new("RGB", aspect)
+
 
 def replace_unity3d_asset(asset: str, img: Image.Image, by_path_id=False) -> None:
     env = unity_load(
@@ -46,7 +48,7 @@ def replace_unity3d_asset(asset: str, img: Image.Image, by_path_id=False) -> Non
         for obj in env.objects:
             if obj.type.name == "Sprite":
                 data = obj.read()
-                if asset == data.name:
+                if asset == data.m_Name:
                     data.m_Rect.width, data.m_Rect.height = img.size
                     data.m_RD.textureRect.width, data.m_RD.textureRect.height = img.size
                     data.save()
@@ -55,7 +57,7 @@ def replace_unity3d_asset(asset: str, img: Image.Image, by_path_id=False) -> Non
     for obj in env.objects:
         if obj.type.name == "Texture2D":
             data = obj.read()
-            if by_path_id and str(obj.path_id) == asset or asset == data.name:
+            if by_path_id and str(obj.path_id) == asset or asset == data.m_Name:
                 data.m_Width, data.m_Height = img.size
 
                 data.set_image(
@@ -106,13 +108,13 @@ def extract_unity3d_image(asset: str, by_id=False) -> None:
             data = obj.read()
             if by_id:
                 if str(obj.path_id) == asset:
-                    dest = join("Images", slugify(data.name) + ".png")
+                    dest = join("Images", slugify(data.m_Name) + ".png")
                     img = data.image
                     img.save(dest)
                     break
             else:
-                if asset == data.name:
-                    dest = join("images", slugify(data.name) + ".png")
+                if asset == data.m_Name:
+                    dest = join("images", slugify(data.m_Name) + ".png")
                     img = data.image
                     img.save(dest)
                     break
@@ -187,7 +189,7 @@ def fetch_sleeve_dx_thumb_list() -> list[ImageTk.PhotoImage]:
         for obj in env.objects:
             if obj.type.name == "Texture2D":
                 data = obj.read()
-                if "_1" in data.name or "_2" in data.name:
+                if "_1" in data.m_Name or "_2" in data.m_Name:
                     img = data.image.resize((187, 266))
                     img.convert("RGB")
                     img.name = FILE["IMAGE_NAME"]
@@ -204,7 +206,7 @@ def fetch_home_bg() -> ImageTk.PhotoImage:
     for obj in env.objects:
         if obj.type.name == "Texture2D":
             data = obj.read()
-            if "ShopBGBase02" == data.name:
+            if "ShopBGBase02" == data.m_Name:
                 img = data.image.resize((1120, 630))
                 img.convert("RGB")
                 img.name = FILE["IMAGE_NAME"]
@@ -239,7 +241,7 @@ def fetch_field_thumb_list() -> list[ImageTk.PhotoImage]:
         for obj in env.objects:
             if obj.type.name == "Texture2D":
                 data = obj.read()
-                if "01_BaseColor_near" in data.name:
+                if "01_BaseColor_near" in data.m_Name:
                     img = data.image
                     img.convert("RGB")
                     img.name = FILE["IMAGE_NAME"]
