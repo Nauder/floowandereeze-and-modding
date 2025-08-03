@@ -4,6 +4,11 @@
     <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue">
 </p>
 
+> **⚠️ ARCHIVED PROJECT**  
+> This repository has been archived and is no longer actively maintained. A newer version is 
+available [here](https://github.com/Nauder/floowandereeze-and-modding-qt)  
+> Please use the updated version for the latest features and bug fixes.
+
 This is a pure Python tool that is able to replace card sleeves, deluxe sleeves, card arts, icons, home arts and
 most fields in the Yu-Gi-Oh! Master Duel game with a user-given image, making the process of creating custom
 assets trivial. It's also able to swap mates and field assets.
